@@ -1,0 +1,3 @@
+id	manipulatorType	imageType	image	name	prefabImage
+1	1	Assault_Rifle-15_72dpi	WP_1	m	body1
+2	2	Handgun-1_72dpi	WP_2	n	body2

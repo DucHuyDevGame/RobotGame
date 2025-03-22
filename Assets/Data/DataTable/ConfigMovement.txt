@@ -1,0 +1,5 @@
+id	movementType	imageType	image	name	prefabImage
+1	1	Assault_Rifle-15_72dpi	WP_5	j	head1
+2	2	Handgun-1_72dpi	WP_3	k	head2
+3	3	Machine_gun-1_72dpi	WP_4	l	head3
+4	4	Shotgun-6_72dpi	WP_1	q	head4

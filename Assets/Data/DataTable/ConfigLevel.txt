@@ -1,0 +1,2 @@
+id	taskType	environmentType	objectForRobot	sceneName
+1	1	1	1	Ingame

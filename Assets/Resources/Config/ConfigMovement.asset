@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf6ba7a33881134c9f9a2f893d9b8e1, type: 3}
+  m_Name: ConfigMovement
+  m_EditorClassIdentifier: 
+  records:
+  - id: 1
+    imageType: Assault_Rifle-15_72dpi
+    image: WP_5
+    name: j
+    prefabImage: head1
+    movementType: 1
+  - id: 2
+    imageType: Handgun-1_72dpi
+    image: WP_3
+    name: k
+    prefabImage: head2
+    movementType: 2
+  - id: 3
+    imageType: Machine_gun-1_72dpi
+    image: WP_4
+    name: l
+    prefabImage: head3
+    movementType: 3
+  - id: 4
+    imageType: Shotgun-6_72dpi
+    image: WP_1
+    name: q
+    prefabImage: head4
+    movementType: 4

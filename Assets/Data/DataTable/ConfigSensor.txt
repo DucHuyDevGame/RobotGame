@@ -1,0 +1,4 @@
+id	sensorType	imageType	image	name	prefabImage
+1	1	Assault_Rifle-15_72dpi	WP_5	a	head5
+2	2	Handgun-1_72dpi	WP_3	b	head6
+3	3	Machine_gun-1_72dpi	WP_4	c	head7

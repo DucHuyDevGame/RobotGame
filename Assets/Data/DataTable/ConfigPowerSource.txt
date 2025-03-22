@@ -1,0 +1,3 @@
+id	powerSourceType	imageType	image	name	prefabImage
+1	1	Assault_Rifle-15_72dpi	WP_5	e	turret1
+2	2	Handgun-1_72dpi	WP_3	f	turret2
