@@ -28,7 +28,9 @@ public class CharacterBufferControl : MonoBehaviour
     void Setup()
     {
         weaponData = DataController.Instance.ReloadWeapon();
-        
+
+        if (weaponData == null)
+            return;
         movement.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.movementData.image);
 
         manipulator.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.manipulatorData.image);
