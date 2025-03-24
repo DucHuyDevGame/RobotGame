@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterBufferControl : MonoBehaviour
+public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
 {
     WeaponsData weaponData;
     [SerializeField] SpriteRenderer movement, manipulator, sensor, powerSource;
+    public Transform trans;
+    private void Awake()
+    {
+        trans = transform;
+    }
     private void Start()
     {
         Setup();

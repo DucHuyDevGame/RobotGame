@@ -1,32 +1,47 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class HomeView : BaseView
 {
-    WeaponsData weapon;
+    WeaponsData weapon; 
+    [SerializeField] TMP_Text taskTypeTxt, enviromentTxt, objectTxt;
+    ConfigLevelRecord cfLevel;
     public override void Setup(ViewParam param)
     {
         base.Setup(param);
-        weapon = DataController.Instance.ReloadWeapon();
+        weapon = DataController.Instance.ReloadWeapon(); 
+        CharacterBufferControl.Instance.trans.DOMove(new Vector3(-6.23f, 0.7f, -1f), 0.5f)
+            .SetEase(Ease.OutQuad);
+        cfLevel = ConfigManager.Instance.configLevel.records[0];
+        taskTypeTxt.text = $"Task type: {cfLevel.TaskType}";
+        enviromentTxt.text = $"Enviroment: {cfLevel.EnvironmentType}";
+        objectTxt.text = cfLevel.Object == 1 ? "Object: Yes" : "Object: No";
     }
     public void OnWeaponView()
     {
         ViewManager.Instance.SwitchView(ViewIndex.WeaponView);
     }
+    public override void OnShowView()
+    {
+        base.OnShowView();
+        DataTrigger.RegisterValueChange(DataSchema.WEAPON, UpdateWeapon);
+    }
+    public override void OnHideView()
+    {
+        base.OnHideView();
+        DataTrigger.UnRegisterValueChange(DataSchema.WEAPON, UpdateWeapon);
+    }
+    void UpdateWeapon(object data)
+    {
+        weapon = DataController.Instance.ReloadWeapon();
+    }
     public void LoadSceneLevel()
     {
-        ConfigLevelRecord cfLevel = ConfigManager.Instance.configLevel.records.FirstOrDefault(level =>
-            level.Object == 1 &&
-            level.TaskType == TaskType.Navigation &&
-            level.EnvironmentType == EnvironmentType.Water &&
-            weapon.movementData.movementType == MovementType.Wheels &&
-            weapon.manipulatorData.manipulatorType == ManipulatorType.Gripper &&
-            weapon.sensorTypeData.sensorType == SensorsType.Heat &&
-            weapon.powerSourceTypeData.powerSourceType == PowerSourceType.PowerCore);
-
-        if (cfLevel != null)
+        if (cfLevel.TaskType == TaskType.Navigation && weapon.movementData.movementType == MovementType.Wheels)
         {
             LoadSceneManager.Instance.LoadSceneByName(cfLevel.SceneName, () =>
             {
@@ -35,5 +50,6 @@ public class HomeView : BaseView
         }
         else
             DialogManager.Instance.ShowDialog(DialogIndex.CancelDialog);
+        
     }
 }

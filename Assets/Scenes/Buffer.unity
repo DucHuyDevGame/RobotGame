@@ -3042,6 +3042,7 @@ MonoBehaviour:
   manipulator: {fileID: 605879184}
   sensor: {fileID: 873471187}
   powerSource: {fileID: 1166498962}
+  trans: {fileID: 0}
 --- !u!4 &1738101016
 Transform:
   m_ObjectHideFlags: 0
@@ -3051,7 +3052,7 @@ Transform:
   m_GameObject: {fileID: 1738101014}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.01, y: -0.04, z: -1}
+  m_LocalPosition: {x: -5.27, y: 0.32, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children:

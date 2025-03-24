@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class CancelDialog : BaseDialog
+public class SelectDialog : BaseDialog
 {
     public override void OnShowDialog()
     {

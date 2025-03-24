@@ -1056,6 +1056,7 @@ MonoBehaviour:
   configMovement: {fileID: 0}
   configSensor: {fileID: 0}
   configPowerSource: {fileID: 0}
+  configLevel: {fileID: 0}
 --- !u!1 &1929701107
 GameObject:
   m_ObjectHideFlags: 0

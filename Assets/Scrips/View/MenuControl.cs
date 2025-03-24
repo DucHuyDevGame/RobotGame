@@ -8,6 +8,7 @@ public class MenuControl : BYSingletonMono<MenuControl>
 {
     public RectTransform top;
     public RectTransform bottom;
+    public RectTransform right;
     void Awake()
     {
         SceneManager.sceneLoaded += SceneManager_sceneLoaded;
@@ -19,6 +20,8 @@ public class MenuControl : BYSingletonMono<MenuControl>
         {
             top.DOAnchorPosY(0, 0.5f);
             bottom.DOAnchorPosY(0, 0.5f);
+            right.DOAnchorPosX(-555, 0.25f);
+            right.DOAnchorPosY(-18, 0.5f);
         }
     }
 }

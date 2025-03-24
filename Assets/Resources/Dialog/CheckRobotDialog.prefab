@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: 6}
+  m_AnchoredPosition: {x: 0, y: 6}
   m_SizeDelta: {x: 555.7504, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &118453947691321455
@@ -65,7 +65,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Robots are not suitable
+  m_text: '
+
+    You haven''t checked the robot yet'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d9b454495b7d24a7a933eb61bdfa0607, type: 2}
   m_sharedMaterial: {fileID: 7409485994217783921, guid: d9b454495b7d24a7a933eb61bdfa0607, type: 2}
@@ -219,9 +221,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4328595945201088014}
   - component: {fileID: 4026021899924323781}
-  - component: {fileID: 7131358055799337559}
+  - component: {fileID: 8084584888910188011}
   m_Layer: 5
-  m_Name: CancelDialog
+  m_Name: CheckRobotDialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,7 +257,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2635524247392412314}
   m_CullTransparentMesh: 1
---- !u!114 &7131358055799337559
+--- !u!114 &8084584888910188011
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,10 +266,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2635524247392412314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 610e788c19dd903408e8be1b4d9056d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 90e4865f3f75c9644b49fcc7c2c2ced7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogIndex: 2
+  dialogIndex: 4
   dialogAnimation: {fileID: 0}
 --- !u!1 &2780953121032489211
 GameObject:
@@ -334,9 +336,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Quit
-
-'
+  m_text: OK
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d9b454495b7d24a7a933eb61bdfa0607, type: 2}
   m_sharedMaterial: {fileID: 7409485994217783921, guid: d9b454495b7d24a7a933eb61bdfa0607, type: 2}
@@ -441,7 +441,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 59}
+  m_AnchoredPosition: {x: 43, y: 59}
   m_SizeDelta: {x: 423, y: 188}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &2780953122478611879
@@ -526,8 +526,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7131358055799337559}
-        m_TargetAssemblyTypeName: CancelDialog, Assembly-CSharp
+      - m_Target: {fileID: 8084584888910188011}
+        m_TargetAssemblyTypeName: CheckRobotDialog, Assembly-CSharp
         m_MethodName: ReturnHome
         m_Mode: 1
         m_Arguments:
@@ -659,8 +659,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7131358055799337559}
-        m_TargetAssemblyTypeName: CancelDialog, Assembly-CSharp
+      - m_Target: {fileID: 8084584888910188011}
+        m_TargetAssemblyTypeName: CheckRobotDialog, Assembly-CSharp
         m_MethodName: ReturnHome
         m_Mode: 1
         m_Arguments:
