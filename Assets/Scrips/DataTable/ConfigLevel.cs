@@ -24,11 +24,23 @@ public class ConfigLevelRecord
     [SerializeField] EnvironmentType environmentType;
     public EnvironmentType EnvironmentType => environmentType;
 
-    [SerializeField] int objectForRobot; // 0 -> false; 1-> true
-    public int Object => objectForRobot;
+    [SerializeField] bool objectForRobot;
+    public bool ObjectForRobot => objectForRobot;
 
     [SerializeField] string sceneName;
     public string SceneName => sceneName;
+
+    [SerializeField] ManipulatorType manipulatorType;
+    public ManipulatorType ManipulatorType => manipulatorType;
+
+    [SerializeField] MovementType movementType;
+    public MovementType MovementType => movementType;
+
+    [SerializeField] PowerSourceType powerSourceType;
+    public PowerSourceType PowerSourceType => powerSourceType;
+
+    [SerializeField] SensorsType sensorsType;
+    public SensorsType SensorsType => sensorsType;
 }
 
 public class ConfigLevel : BYDataTable<ConfigLevelRecord>

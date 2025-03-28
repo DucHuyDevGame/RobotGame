@@ -19,7 +19,7 @@ public class HomeView : BaseView
         cfLevel = ConfigManager.Instance.configLevel.records[0];
         taskTypeTxt.text = $"Task type: {cfLevel.TaskType}";
         enviromentTxt.text = $"Enviroment: {cfLevel.EnvironmentType}";
-        objectTxt.text = cfLevel.Object == 1 ? "Object: Yes" : "Object: No";
+        objectTxt.text = cfLevel.ObjectForRobot? "Object: Yes" : "Object: No";
     }
     public void OnWeaponView()
     {
@@ -41,7 +41,8 @@ public class HomeView : BaseView
     }
     public void LoadSceneLevel()
     {
-        if (cfLevel.TaskType == TaskType.Navigation && weapon.movementData.movementType == MovementType.Wheels)
+        if (cfLevel.TaskType == TaskType.Navigation && cfLevel.MovementType == weapon.movementData.movementType
+            && !cfLevel.ObjectForRobot && cfLevel.EnvironmentType == EnvironmentType.FlatGround)
         {
             LoadSceneManager.Instance.LoadSceneByName(cfLevel.SceneName, () =>
             {

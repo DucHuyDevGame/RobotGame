@@ -1,2 +1,2 @@
-id	taskType	environmentType	objectForRobot	sceneName
-1	1	1	1	Ingame
+id	taskType	environmentType	objectForRobot	sceneName	manipulatorType	movementType	powerSourceType	sensorsType
+1	1	2	0	Ingame	1	1	1	1

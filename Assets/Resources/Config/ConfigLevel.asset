@@ -15,6 +15,10 @@ MonoBehaviour:
   records:
   - id: 1
     taskType: 1
-    environmentType: 1
-    objectForRobot: 1
+    environmentType: 2
+    objectForRobot: 0
     sceneName: Ingame
+    manipulatorType: 1
+    movementType: 1
+    powerSourceType: 1
+    sensorsType: 1
