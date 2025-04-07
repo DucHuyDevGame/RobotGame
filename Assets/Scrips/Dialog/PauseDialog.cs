@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PauseDialog : BaseDialog
 {
-    // Start is called before the first frame update
     public override void OnShowDialog()
     {
         base.OnShowDialog();
@@ -24,8 +23,7 @@ public class PauseDialog : BaseDialog
         DialogManager.Instance.HideDialog(dialogIndex);
         LoadSceneManager.Instance.LoadSceneByIndex(1, () =>
         {
-         //   ViewManager.instance.SwitchView(ViewIndex.HomeView);
-
+            ViewManager.Instance.SwitchView(ViewIndex.HomeView);
         });
     }
 }

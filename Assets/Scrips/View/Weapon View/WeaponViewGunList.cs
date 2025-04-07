@@ -67,26 +67,8 @@ public class WeaponViewGunList : MonoBehaviour, IEnhancedScrollerDelegate
     public void ButtonOne()
     {
         data_list = new List<WeaponListData>();
-        if(typeConfig.Equals("Movement"))
-        {
-            foreach(ConfigMovementRecord cf in ConfigManager.Instance.configMovement.GetRecordBuyWeaponType(MovementType.Wheels))
-                data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
-        }
-        else if (typeConfig.Equals("Manipulator"))
-        {
-            foreach (ConfigManipulatorRecord cf in ConfigManager.Instance.configManipulator.GetRecordBuyWeaponType(ManipulatorType.Gripper))
-                data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
-        }
-        else if(typeConfig.Equals("PowerSource"))
-        {
-            foreach (ConfigPowerSourceRecord cf in ConfigManager.Instance.configPowerSource.GetRecordBuyWeaponType(PowerSourceType.PowerCore))
-                data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
-        }
-        else if (typeConfig.Equals("Sensor"))
-        {
-            foreach (ConfigSensorRecord cf in ConfigManager.Instance.configSensor.GetRecordBuyWeaponType(SensorsType.Heat))
-                data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
-        }
+        foreach(ConfigMovementRecord cf in ConfigManager.Instance.configMovement.records)
+            data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
         scroller.ReloadData();
         scroller.JumpToDataIndex(0);
         Invoke(nameof(DelayJump), 0.1f);
@@ -94,26 +76,8 @@ public class WeaponViewGunList : MonoBehaviour, IEnhancedScrollerDelegate
     public void ButtonTwo()
     {
         data_list = new List<WeaponListData>();
-        if (typeConfig.Equals("Movement"))
-        {
-            foreach (ConfigMovementRecord cf in ConfigManager.Instance.configMovement.GetRecordBuyWeaponType(MovementType.Tracks))
-                data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
-        }
-        else if (typeConfig.Equals("Manipulator"))
-        {
-            foreach (ConfigManipulatorRecord cf in ConfigManager.Instance.configManipulator.GetRecordBuyWeaponType(ManipulatorType.Crane))
-                data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
-        }
-        else if (typeConfig.Equals("PowerSource"))
-        {
-            foreach (ConfigPowerSourceRecord cf in ConfigManager.Instance.configPowerSource.GetRecordBuyWeaponType(PowerSourceType.Battery))
-                data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
-        }
-        else if (typeConfig.Equals("Sensor"))
-        {
-            foreach (ConfigSensorRecord cf in ConfigManager.Instance.configSensor.GetRecordBuyWeaponType(SensorsType.Sound))
-                data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
-        }
+        foreach (ConfigManipulatorRecord cf in ConfigManager.Instance.configManipulator.records)
+            data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
         scroller.ReloadData();
         scroller.JumpToDataIndex(0);
         Invoke(nameof(DelayJump), 0.1f);
@@ -121,16 +85,8 @@ public class WeaponViewGunList : MonoBehaviour, IEnhancedScrollerDelegate
     public void ButtonThrid()
     {
         data_list = new List<WeaponListData>();
-        if (typeConfig.Equals("Movement"))
-        {
-            foreach (ConfigMovementRecord cf in ConfigManager.Instance.configMovement.GetRecordBuyWeaponType(MovementType.Legs))
-                data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
-        }
-        else if (typeConfig.Equals("Sensor"))
-        {
-            foreach (ConfigSensorRecord cf in ConfigManager.Instance.configSensor.GetRecordBuyWeaponType(SensorsType.Color))
-                data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
-        }
+        foreach (ConfigSensorRecord cf in ConfigManager.Instance.configSensor.records)
+            data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
         scroller.ReloadData();
         scroller.JumpToDataIndex(0);
         Invoke(nameof(DelayJump), 0.1f);
@@ -138,24 +94,21 @@ public class WeaponViewGunList : MonoBehaviour, IEnhancedScrollerDelegate
     public void ButtonFour()
     {
         data_list = new List<WeaponListData>();
-        if (typeConfig.Equals("Movement"))
-        {
-            foreach (ConfigMovementRecord cf in ConfigManager.Instance.configMovement.GetRecordBuyWeaponType(MovementType.JetPack))
-                data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
-        }
+        foreach(ConfigPowerSourceRecord cf in ConfigManager.Instance.configPowerSource.records)
+            data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
         scroller.ReloadData();
         scroller.JumpToDataIndex(0);
         Invoke(nameof(DelayJump), 0.1f);
     }
-    public void SetUpConfig(ConfigType type)
-    {
-        if (type == ConfigType.Movement)
-            typeConfig = "Movement";
-        else if (type == ConfigType.Manipulator)
-            typeConfig = "Manipulator";
-        else if (type == ConfigType.PowerSource)
-            typeConfig = "PowerSource";
-        else if (type == ConfigType.Sensor)
-            typeConfig = "Sensor";
-    }
+    //public void SetUpConfig(ConfigType type)
+    //{
+    //    if (type == ConfigType.Movement)
+    //        typeConfig = "Movement";
+    //    else if (type == ConfigType.Manipulator)
+    //        typeConfig = "Manipulator";
+    //    else if (type == ConfigType.PowerSource)
+    //        typeConfig = "PowerSource";
+    //    else if (type == ConfigType.Sensor)
+    //        typeConfig = "Sensor";
+    //}
 }

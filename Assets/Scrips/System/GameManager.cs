@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class GameManager : BYSingletonMono<GameManager>
 {
-   
+    public ConfigLevelRecord cur_cf_Level;
 }

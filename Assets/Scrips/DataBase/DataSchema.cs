@@ -10,6 +10,8 @@ public class DataSchema
     public const string GOLD = "inventory/gold";
     public const string GEM = "inventory/gem";
     public const string WEAPON = "inventory/weaponData";
+    public const string DIC_MISSION = "missionData/dic_mission";
+    public const string MISSIONS = "info/missions";
 }
 [Serializable]
 public class PlayerData
@@ -23,9 +25,7 @@ public class PlayerData
 [Serializable]
 public class PlayerInfo
 {
-    public string nickname;
-    public int level;
-    public int exp;
+    [SerializeField] public List<MissionData> missions = new List<MissionData>();
 }
 [Serializable]
 public class PlayerInventory
@@ -33,19 +33,6 @@ public class PlayerInventory
     public int gold;
     public int gem;
     [SerializeField] public WeaponsData weaponData;
-}
-[Serializable]
-public class PlayerMissionData
-{
-    public int currentMission;
-    [SerializeField]
-    public Dictionary<string, MissionData> dic_mission = new Dictionary<string, MissionData>();
-}
-[Serializable]
-public class MissionData
-{
-    public int id;
-    public int star;
 }
 [Serializable]
 public class WeaponsData
@@ -79,4 +66,17 @@ public class PowerSourceData
 {
     public string image;
     public PowerSourceType powerSourceType;
+}
+[Serializable]
+public class PlayerMissionData
+{
+    [SerializeField]
+    public Dictionary<string, MissionData> dic_mission = new Dictionary<string, MissionData>();
+}
+[Serializable]
+public class MissionData
+{
+    public int id;
+    public int star;
+    public bool missionComplete;
 }

@@ -41,6 +41,12 @@ public class ConfigLevelRecord
 
     [SerializeField] SensorsType sensorsType;
     public SensorsType SensorsType => sensorsType;
+
+    [SerializeField] int start;
+    public int Start => start;
+
+    [SerializeField] string missionName;
+    public string MisisonName => missionName;
 }
 
 public class ConfigLevel : BYDataTable<ConfigLevelRecord>

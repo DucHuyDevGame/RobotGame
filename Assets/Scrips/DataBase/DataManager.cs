@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class DataManager : BYSingletonMono<DataManager>
 {
+    public List<MissionData> missonsData;
     public WeaponsData dataWeapon;
     public PlayerData InitData()
     {
         PlayerData playerData = new PlayerData();
         PlayerInfo info = new()
         {
-            nickname = "Huy",
-            level = 1,
-            exp = 0
+            missions = missonsData,
         };
         playerData.info = info;
 
@@ -24,10 +23,11 @@ public class DataManager : BYSingletonMono<DataManager>
         };
         playerData.inventory = inventory;
 
-        PlayerMissionData missionData = new()
-        {
-            currentMission = 1
-        };
+        PlayerMissionData missionData = new();
+        Dictionary<string, MissionData> missions = new();
+        foreach (MissionData mis in missonsData)
+            missions.Add(mis.id.Tokey(), mis);
+        missionData.dic_mission = missions;
         playerData.missionData = missionData;
         return playerData;
     }

@@ -6,12 +6,15 @@ using DG.Tweening;
 
 public class WeaponViewAnimation : BaseViewAnimation
 {
-    public RectTransform top;
-    public RectTransform right;
-    public RectTransform left;
+    [SerializeField] RectTransform top;
+    [SerializeField] RectTransform right;
+    [SerializeField] RectTransform left;
     public override void OnHideAnimation(Action callback)
     {
         base.OnHideAnimation(callback);
+        top.DOKill();
+        right.DOKill();
+        left.DOKill();
         top.DOAnchorPosY(250, 0.5f).OnComplete(() => {
          
             callback();
@@ -25,6 +28,9 @@ public class WeaponViewAnimation : BaseViewAnimation
     public override void OnShowAnimation(Action callback)
     {
         base.OnShowAnimation(callback);
+        top.DOKill();
+        right.DOKill();
+        left.DOKill();
         top.DOAnchorPosY(0, 0.5f).OnComplete(()=>{
             callback();
         });

@@ -7,7 +7,8 @@ public enum ViewIndex
     EmptyView= 1,
     HomeView = 2,
     WeaponView = 3,
-
+    StageView = 4,
+    IngameView = 5,
 }
 public class ViewParam
 {
@@ -19,6 +20,8 @@ public class ViewConfig
         ViewIndex.EmptyView, 
         ViewIndex.HomeView,
         ViewIndex.WeaponView,
+        ViewIndex.StageView,
+        ViewIndex.IngameView,
     };
 }
  

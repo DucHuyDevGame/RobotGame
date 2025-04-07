@@ -689,6 +689,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9f22cc8d03a8640aa0cd14b20cb229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missonsData:
+  - id: 1
+    star: 0
+    missionComplete: 0
+  - id: 2
+    star: 0
+    missionComplete: 0
+  - id: 3
+    star: 0
+    missionComplete: 0
+  - id: 4
+    star: 0
+    missionComplete: 0
+  - id: 5
+    star: 0
+    missionComplete: 0
+  - id: 6
+    star: 0
+    missionComplete: 0
+  - id: 7
+    star: 0
+    missionComplete: 0
+  - id: 8
+    star: 0
+    missionComplete: 0
+  - id: 9
+    star: 0
+    missionComplete: 0
+  - id: 10
+    star: 0
+    missionComplete: 0
+  - id: 11
+    star: 0
+    missionComplete: 0
+  - id: 12
+    star: 0
+    missionComplete: 0
   dataWeapon:
     movementData:
       image: head1
@@ -861,6 +898,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 05a149fe40332614daed09c1b83742cb, type: 3}
   - {fileID: 21300000, guid: 4fa86595a8244bb44a0bbc4d4ca13770, type: 3}
   - {fileID: 21300000, guid: 68fb1ef6fa158884e8ef57608fc2d92c, type: 3}
+  - {fileID: 21300000, guid: 21af7a9eb7c34e0488e64fed9e14d1dc, type: 3}
+  - {fileID: 21300000, guid: b95ae9719980d364a93ed2207cc1d8d3, type: 3}
+  - {fileID: 21300000, guid: dbc52a56ee940a949980641b7a16e634, type: 3}
 --- !u!1 &1673458965
 GameObject:
   m_ObjectHideFlags: 0

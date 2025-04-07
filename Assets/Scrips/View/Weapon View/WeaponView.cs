@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class WeaponView : BaseView
 {
@@ -44,22 +43,6 @@ public class WeaponView : BaseView
     }
     public void OnHomeView()
     {
-        if (checkRobot)
-            ViewManager.Instance.SwitchView(ViewIndex.HomeView);
-        else
-            DialogManager.Instance.ShowDialog(DialogIndex.CheckRobotDialog);
-    }
-    public void OnCheckRobot()
-    {
-        if (configLevelRecord.TaskType == TaskType.Navigation && weaponData.movementData.movementType == MovementType.Wheels)
-        {
-            checkRobot = true;
-            DialogManager.Instance.ShowDialog(DialogIndex.SelectDialog);
-        }
-        else
-        {
-            checkRobot = false;
-            DialogManager.Instance.ShowDialog(DialogIndex.CancelDialog);
-        }
+        ViewManager.Instance.SwitchView(ViewIndex.IngameView);
     }
 }

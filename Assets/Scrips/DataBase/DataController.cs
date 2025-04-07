@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DataController : BYSingletonMono<DataController>
@@ -82,5 +83,54 @@ public class DataController : BYSingletonMono<DataController>
             weaponsData.powerSourceTypeData.powerSourceType = cf.PowerSourceType;
         }
         dataModel.UpdateData(DataSchema.WEAPON, weaponsData);
+    }
+    public List<MissionData> GetMissionData()
+    {
+        return dataModel.ReadData<List<MissionData>>(DataSchema.MISSIONS);
+    }
+    public void UpdateMissionData(int id, int start)
+    {
+        var missionDatas = dataModel.ReadData<Dictionary<string, MissionData>>(DataSchema.DIC_MISSION);
+        foreach (var key in missionDatas.Keys.ToList())
+        {
+            var missionData = missionDatas[key];
+            if (id == missionData.id)
+            {
+                missionData.missionComplete = true;
+                if (missionData.star < start)
+                    missionData.star = start;
+            }
+            else
+            {
+                if (id + 1 == missionData.id)
+                {
+                    missionData.missionComplete = false;
+                    missionData.star = 0;
+                    break;
+                }
+            }
+        }
+        dataModel.UpdateData(DataSchema.DIC_MISSION, missionDatas);
+
+        List<MissionData> missionDatasList = GetMissionData();
+        for (int i = 0; i < missionDatasList.Count; i++)
+        {
+            if (missionDatasList[i].id == id)
+            {
+                missionDatasList[i].missionComplete = true;
+                if (missionDatasList[i].star < start)
+                    missionDatasList[i].star = start;
+            }
+            else
+            {
+                if (missionDatasList[i].id == id + 1)
+                {
+                    missionDatasList[i].missionComplete = false;
+                    missionDatasList[i].star = 0;
+                    break;
+                }
+            }
+        }
+        dataModel.UpdateData(DataSchema.MISSIONS, missionDatasList);
     }
 }
