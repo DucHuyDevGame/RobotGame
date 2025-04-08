@@ -10,15 +10,14 @@ public class WeaponView : BaseView
     public RectTransform m_DraggingPlane;
     public GameObject lockUIObject;
     [SerializeField] TMP_Text taskTypeTxt, enviromentTxt, objectTxt;
-    bool checkRobot;
     ConfigLevelRecord configLevelRecord;
     WeaponsData weaponData;
     public override void Setup(ViewParam param)
     {
         base.Setup(param);
+        CharacterBufferControl.Instance.tapEdit.gameObject.SetActive(false);
         lockUIObject.SetActive(false);
         tapLargeButtons.Init();
-        checkRobot = false;
         CharacterBufferControl.Instance.trans.DOMove(new Vector3(-1.84f, -0.26f, -1f), 0.5f)
             .SetEase(Ease.OutQuad);
         configLevelRecord = ConfigManager.Instance.configLevel.records[0];

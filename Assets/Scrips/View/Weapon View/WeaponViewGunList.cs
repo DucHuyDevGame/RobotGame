@@ -67,7 +67,8 @@ public class WeaponViewGunList : MonoBehaviour, IEnhancedScrollerDelegate
     public void ButtonOne()
     {
         data_list = new List<WeaponListData>();
-        foreach(ConfigMovementRecord cf in ConfigManager.Instance.configMovement.records)
+        typeConfig = "Movement";
+        foreach (ConfigMovementRecord cf in ConfigManager.Instance.configMovement.records)
             data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
         scroller.ReloadData();
         scroller.JumpToDataIndex(0);
@@ -76,6 +77,7 @@ public class WeaponViewGunList : MonoBehaviour, IEnhancedScrollerDelegate
     public void ButtonTwo()
     {
         data_list = new List<WeaponListData>();
+        typeConfig = "Manipulator";
         foreach (ConfigManipulatorRecord cf in ConfigManager.Instance.configManipulator.records)
             data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
         scroller.ReloadData();
@@ -85,6 +87,7 @@ public class WeaponViewGunList : MonoBehaviour, IEnhancedScrollerDelegate
     public void ButtonThrid()
     {
         data_list = new List<WeaponListData>();
+        typeConfig = "Sensor";
         foreach (ConfigSensorRecord cf in ConfigManager.Instance.configSensor.records)
             data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
         scroller.ReloadData();
@@ -94,7 +97,8 @@ public class WeaponViewGunList : MonoBehaviour, IEnhancedScrollerDelegate
     public void ButtonFour()
     {
         data_list = new List<WeaponListData>();
-        foreach(ConfigPowerSourceRecord cf in ConfigManager.Instance.configPowerSource.records)
+        typeConfig = "PowerSource";
+        foreach (ConfigPowerSourceRecord cf in ConfigManager.Instance.configPowerSource.records)
             data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
         scroller.ReloadData();
         scroller.JumpToDataIndex(0);

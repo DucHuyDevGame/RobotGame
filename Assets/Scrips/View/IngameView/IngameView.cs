@@ -11,6 +11,7 @@ public class IngameView : BaseView
     public override void Setup(ViewParam param)
     {
         base.Setup(param);
+        CharacterBufferControl.Instance.tapEdit.gameObject.SetActive(true);
         CharacterBufferControl.Instance.trans.DOMove(new Vector3(-5.27f, 0.32f, -1f), 0.05f)
             .SetEase(Ease.OutQuad);
         cfLevel = GameManager.Instance.cur_cf_Level;
@@ -46,5 +47,13 @@ public class IngameView : BaseView
         Vector2 mousePosition = Input.mousePosition;
         if (IsPointerOverGameObject(mousePosition))
             ViewManager.Instance.SwitchView(ViewIndex.WeaponView);
+    }
+    public void CheckWin()
+    {
+        WinDialogParam param = new()
+        {
+            cf_level = GameManager.Instance.cur_cf_Level
+        };
+        DialogManager.Instance.ShowDialog(DialogIndex.WinDialog, param);
     }
 }

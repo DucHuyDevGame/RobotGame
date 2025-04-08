@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
@@ -7,6 +8,7 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
     WeaponsData weaponData;
     [SerializeField] SpriteRenderer movement, manipulator, sensor, powerSource;
     public Transform trans;
+    public TMP_Text tapEdit;
     private void Awake()
     {
         trans = transform;

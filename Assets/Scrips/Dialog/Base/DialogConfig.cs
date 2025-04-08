@@ -5,13 +5,15 @@ using UnityEngine;
 public enum DialogIndex
 {
     PauseDialog = 1,
-    CancelDialog = 2,
-    SelectDialog = 3,
-    CheckRobotDialog = 4,
+    WinDialog = 2,
 }
 public class DialogParam
 {
 
+}
+public class WinDialogParam : DialogParam
+{
+    public ConfigLevelRecord cf_level;
 }
 
 public class DialogConfig 
@@ -19,8 +21,6 @@ public class DialogConfig
     public static DialogIndex[] dialogIndices =
     {
         DialogIndex.PauseDialog,
-        DialogIndex.CancelDialog,
-        DialogIndex.SelectDialog,
-        DialogIndex.CheckRobotDialog,
+        DialogIndex.WinDialog,
     };
 }
