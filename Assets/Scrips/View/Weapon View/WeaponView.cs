@@ -18,8 +18,8 @@ public class WeaponView : BaseView
         CharacterBufferControl.Instance.tapEdit.gameObject.SetActive(false);
         lockUIObject.SetActive(false);
         tapLargeButtons.Init();
-        CharacterBufferControl.Instance.trans.DOMove(new Vector3(-1.84f, -0.26f, -1f), 0.5f)
-            .SetEase(Ease.OutQuad);
+        //CharacterBufferControl.Instance.trans.DOMove(new Vector3(-1.84f, -0.26f, -1f), 0.5f)
+        //    .SetEase(Ease.OutQuad);
         configLevelRecord = ConfigManager.Instance.configLevel.records[0];
         taskTypeTxt.text = $"Task type: {configLevelRecord.TaskType}";
         enviromentTxt.text = $"Enviroment: {configLevelRecord.EnvironmentType}";

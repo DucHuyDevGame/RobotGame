@@ -22,7 +22,12 @@ public class IngameView : BaseView
     }
     public void OnPause()
     {
-        DialogManager.Instance.ShowDialog(DialogIndex.PauseDialog);
+        //DialogManager.Instance.ShowDialog(DialogIndex.PauseDialog);
+        ViewManager.Instance.SwitchView(ViewIndex.EmptyView);
+        LoadSceneManager.Instance.LoadSceneByIndex(1, () =>
+        {
+            ViewManager.Instance.SwitchView(ViewIndex.HomeView);
+        });
     }
     bool IsPointerOverGameObject(Vector2 pos)
     {
