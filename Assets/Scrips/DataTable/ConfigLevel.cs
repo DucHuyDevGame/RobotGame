@@ -47,6 +47,9 @@ public class ConfigLevelRecord
 
     [SerializeField] string missionName;
     public string MisisonName => missionName;
+
+    [SerializeField] float timeFinished;
+    public float TimeFinished => timeFinished;
 }
 
 public class ConfigLevel : BYDataTable<ConfigLevelRecord>

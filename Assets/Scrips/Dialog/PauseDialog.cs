@@ -21,7 +21,7 @@ public class PauseDialog : BaseDialog
     public void OnQuit()
     {
         DialogManager.Instance.HideDialog(dialogIndex);
-        LoadSceneManager.Instance.LoadSceneByIndex(1, () =>
+        LoadSceneManager.Instance.LoadSceneByIndex(1, true ,() =>
         {
             ViewManager.Instance.SwitchView(ViewIndex.HomeView);
         });

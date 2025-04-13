@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IngameView : BaseView
 {
     ConfigLevelRecord cfLevel;
     [SerializeField] TMP_Text taskTypeTxt, enviromentTxt, objectTxt, levelTxt;
+    [SerializeField] Button btnRunRobot;
     public override void Setup(ViewParam param)
     {
         base.Setup(param);
@@ -19,12 +21,13 @@ public class IngameView : BaseView
         enviromentTxt.text = $"Enviroment: {cfLevel.EnvironmentType}";
         objectTxt.text = cfLevel.ObjectForRobot ? "Object: Yes" : "Object: No";
         levelTxt.text = $"Level {cfLevel.ID}";
+        btnRunRobot.gameObject.SetActive(true);
     }
     public void OnPause()
     {
         //DialogManager.Instance.ShowDialog(DialogIndex.PauseDialog);
         ViewManager.Instance.SwitchView(ViewIndex.EmptyView);
-        LoadSceneManager.Instance.LoadSceneByIndex(1, () =>
+        LoadSceneManager.Instance.LoadSceneByIndex(1, false, () =>
         {
             ViewManager.Instance.SwitchView(ViewIndex.HomeView);
         });
@@ -53,12 +56,10 @@ public class IngameView : BaseView
         if (IsPointerOverGameObject(mousePosition))
             ViewManager.Instance.SwitchView(ViewIndex.WeaponView);
     }
-    public void CheckWin()
+    public void RunRobot()
     {
-        WinDialogParam param = new()
-        {
-            cf_level = GameManager.Instance.cur_cf_Level
-        };
-        DialogManager.Instance.ShowDialog(DialogIndex.WinDialog, param);
+        RobotController.Instance.runRobot = true;
+        btnRunRobot.gameObject.SetActive(false);
+        CharacterBufferControl.Instance.tapEdit.gameObject.SetActive(false);
     }
 }

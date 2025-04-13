@@ -31,7 +31,6 @@ public class ViewManager : BYSingletonMono<ViewManager>
             OnViewHide?.Invoke(cur_view);
             Action cb = () =>
             {
-               
                 // Hide view 
                 cur_view = dic_View[viewIndex];
                 ShowNewView(param, callback);

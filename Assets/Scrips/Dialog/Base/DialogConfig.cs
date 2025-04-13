@@ -6,6 +6,7 @@ public enum DialogIndex
 {
     PauseDialog = 1,
     WinDialog = 2,
+    LoseDialog = 3,
 }
 public class DialogParam
 {
@@ -22,5 +23,6 @@ public class DialogConfig
     {
         DialogIndex.PauseDialog,
         DialogIndex.WinDialog,
+        DialogIndex.LoseDialog,
     };
 }

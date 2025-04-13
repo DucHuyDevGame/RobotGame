@@ -10,6 +10,7 @@ public class WinDialog : BaseDialog
     {
         base.OnShowDialog();
         Time.timeScale = 0;
+        ViewManager.Instance.SwitchView(ViewIndex.EmptyView);
     }
     public override void OnHideDialog()
     {
@@ -24,11 +25,12 @@ public class WinDialog : BaseDialog
     public void OnClaim()
     {
         DialogManager.Instance.HideDialog(dialogIndex);
-        ViewManager.Instance.SwitchView(ViewIndex.EmptyView);
-        LoadSceneManager.Instance.LoadSceneByName("Buffer", () =>
+        DataController.Instance.UpdateMissionData(dl_param.cf_level.ID, 3);
+        ConfigLevelRecord cf = ConfigManager.Instance.configLevel.GetRecordBykeySearch(dl_param.cf_level.ID + 1);
+        LoadSceneManager.Instance.LoadSceneByName(cf.SceneName, false ,() =>
         {
-            DataController.Instance.UpdateMissionData(dl_param.cf_level.ID, 3);
-            ViewManager.Instance.SwitchView(ViewIndex.HomeView);
+            GameManager.Instance.cur_cf_Level = cf;
+            ViewManager.Instance.SwitchView(ViewIndex.IngameView);
         });
     }
 }
