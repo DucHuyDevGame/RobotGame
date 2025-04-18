@@ -5,7 +5,7 @@ using UnityEngine;
 public class RobotController : BYSingletonMono<RobotController>
 {
     Vector2 moveDirection;
-    public bool runRobot;
+    public bool runRobot, timeStart;
     [SerializeField] Rigidbody2D rigi;
     [SerializeField] float timeSpeed;
     void Start()
@@ -14,7 +14,9 @@ public class RobotController : BYSingletonMono<RobotController>
     }
     void FixedUpdate()
     {
-        if(runRobot)
+        if (runRobot)
             rigi.velocity = moveDirection * timeSpeed;
+        else
+            rigi.velocity = Vector2.zero;
     }
 }

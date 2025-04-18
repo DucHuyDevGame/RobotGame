@@ -5,9 +5,9 @@ using System.Linq;
 using UnityEngine;
 public enum SensorsType
 {
-    Heat = 1,
-    Sound = 2,
-    Color = 3,
+    UltrasonicSensor = 1,
+    HeatSensor = 2,
+    LightSensor = 3,
 }
 
 [Serializable]

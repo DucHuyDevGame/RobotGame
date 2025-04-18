@@ -12,7 +12,7 @@ public class TimerManager : MonoBehaviour
     }
     void Update()
     {
-        if (!RobotController.Instance.runRobot)
+        if (!RobotController.Instance.timeStart)
             return;
         if (isLoseShown)
             return;
