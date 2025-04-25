@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 6296905206536873212}
   - component: {fileID: 2006802864317140336}
   m_Layer: 6
-  m_Name: Manipulator
+  m_Name: PowerSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -563,11 +563,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 1350483474311840117}
-  manipulator: {fileID: 2006802864317140336}
-  sensor: {fileID: 6026290436516525738}
-  powerSource: {fileID: 740525967400940890}
+  manipulator: {fileID: 6026290436516525738}
+  sensor: {fileID: 740525967400940890}
+  powerSource: {fileID: 2006802864317140336}
   trans: {fileID: 0}
   tapEdit: {fileID: 0}
+  lightObjectSensor: {fileID: 0}
 --- !u!1 &4092712169462286849
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +580,7 @@ GameObject:
   - component: {fileID: 6672300454172039830}
   - component: {fileID: 740525967400940890}
   m_Layer: 6
-  m_Name: PowerSource
+  m_Name: Sensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3048,7 +3049,7 @@ GameObject:
   - component: {fileID: 7974099468140345279}
   - component: {fileID: 6026290436516525738}
   m_Layer: 6
-  m_Name: Sensor
+  m_Name: Manipulator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -15,145 +15,145 @@ MonoBehaviour:
   records:
   - id: 1
     taskType: 1
-    environmentType: 2
-    objectForRobot: 0
+    environmentType: 1
+    objectType: 0
     sceneName: Ingame
-    manipulatorType: 1
+    manipulatorType: 4
     movementType: 1
-    powerSourceType: 1
-    sensorsType: 1
+    powerSourceType: 3
+    sensorsType: 4
     start: 0
     missionName: 1
     timeFinished: 1
   - id: 2
-    taskType: 1
-    environmentType: 2
-    objectForRobot: 1
+    taskType: 2
+    environmentType: 1
+    objectType: 2
     sceneName: Ingame
-    manipulatorType: 1
+    manipulatorType: 4
     movementType: 1
-    powerSourceType: 1
+    powerSourceType: 3
     sensorsType: 1
     start: 0
     missionName: 2
     timeFinished: 1
   - id: 3
-    taskType: 1
-    environmentType: 2
-    objectForRobot: 1
+    taskType: 3
+    environmentType: 1
+    objectType: 6
     sceneName: Ingame
     manipulatorType: 1
     movementType: 1
-    powerSourceType: 1
+    powerSourceType: 3
     sensorsType: 1
     start: 0
     missionName: 3
     timeFinished: 0
   - id: 4
-    taskType: 1
+    taskType: 4
     environmentType: 2
-    objectForRobot: 0
+    objectType: 0
     sceneName: Ingame
-    manipulatorType: 1
-    movementType: 1
-    powerSourceType: 1
-    sensorsType: 1
+    manipulatorType: 3
+    movementType: 6
+    powerSourceType: 3
+    sensorsType: 3
     start: 0
     missionName: 4
     timeFinished: 0
   - id: 5
-    taskType: 1
-    environmentType: 2
-    objectForRobot: 1
+    taskType: 5
+    environmentType: 1
+    objectType: 1
     sceneName: Ingame
-    manipulatorType: 1
+    manipulatorType: 2
     movementType: 1
-    powerSourceType: 1
-    sensorsType: 1
+    powerSourceType: 3
+    sensorsType: 2
     start: 0
     missionName: 5
     timeFinished: 0
   - id: 6
-    taskType: 1
-    environmentType: 2
-    objectForRobot: 1
+    taskType: 5
+    environmentType: 1
+    objectType: 1
     sceneName: Ingame
-    manipulatorType: 1
+    manipulatorType: 2
     movementType: 1
-    powerSourceType: 1
-    sensorsType: 1
+    powerSourceType: 3
+    sensorsType: 2
     start: 0
-    missionName: 6
+    missionName: 5
     timeFinished: 0
   - id: 7
-    taskType: 1
-    environmentType: 2
-    objectForRobot: 1
+    taskType: 5
+    environmentType: 1
+    objectType: 1
     sceneName: Ingame
-    manipulatorType: 1
+    manipulatorType: 2
     movementType: 1
-    powerSourceType: 1
-    sensorsType: 1
+    powerSourceType: 3
+    sensorsType: 2
     start: 0
-    missionName: 7
+    missionName: 5
     timeFinished: 0
   - id: 8
-    taskType: 1
-    environmentType: 2
-    objectForRobot: 1
+    taskType: 5
+    environmentType: 1
+    objectType: 1
     sceneName: Ingame
-    manipulatorType: 1
+    manipulatorType: 2
     movementType: 1
-    powerSourceType: 1
-    sensorsType: 1
+    powerSourceType: 3
+    sensorsType: 2
     start: 0
-    missionName: 8
+    missionName: 5
     timeFinished: 0
   - id: 9
-    taskType: 1
-    environmentType: 2
-    objectForRobot: 1
+    taskType: 5
+    environmentType: 1
+    objectType: 1
     sceneName: Ingame
-    manipulatorType: 1
+    manipulatorType: 2
     movementType: 1
-    powerSourceType: 1
-    sensorsType: 1
+    powerSourceType: 3
+    sensorsType: 2
     start: 0
-    missionName: 9
+    missionName: 5
     timeFinished: 0
   - id: 10
-    taskType: 1
-    environmentType: 2
-    objectForRobot: 1
+    taskType: 5
+    environmentType: 1
+    objectType: 1
     sceneName: Ingame
-    manipulatorType: 1
+    manipulatorType: 2
     movementType: 1
-    powerSourceType: 1
-    sensorsType: 1
+    powerSourceType: 3
+    sensorsType: 2
     start: 0
-    missionName: 10
+    missionName: 5
     timeFinished: 0
   - id: 11
-    taskType: 1
-    environmentType: 2
-    objectForRobot: 1
+    taskType: 5
+    environmentType: 1
+    objectType: 1
     sceneName: Ingame
-    manipulatorType: 1
+    manipulatorType: 2
     movementType: 1
-    powerSourceType: 1
-    sensorsType: 1
+    powerSourceType: 3
+    sensorsType: 2
     start: 0
-    missionName: 11
+    missionName: 5
     timeFinished: 0
   - id: 12
-    taskType: 1
-    environmentType: 2
-    objectForRobot: 1
+    taskType: 5
+    environmentType: 1
+    objectType: 1
     sceneName: Ingame
-    manipulatorType: 1
+    manipulatorType: 2
     movementType: 1
-    powerSourceType: 1
-    sensorsType: 1
+    powerSourceType: 3
+    sensorsType: 2
     start: 0
-    missionName: 12
+    missionName: 5
     timeFinished: 0

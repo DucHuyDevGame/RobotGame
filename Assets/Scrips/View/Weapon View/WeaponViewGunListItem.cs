@@ -26,8 +26,33 @@ public class WeaponViewGunListItem : EnhancedScrollerCellView, IBeginDragHandler
         this.wpdata = data;
         this.weaponView = wpdata.weaponView;
         name_txt.text = wpdata.cf.Name;
-        iconGun.sprite = SpriteLibControl.Instance.GetSpriteByName(wpdata.cf.Image);
+        if (!string.IsNullOrWhiteSpace(wpdata.cf.Image))
+        {
+            iconGun.sprite = SpriteLibControl.Instance.GetSpriteByName(wpdata.cf.Image);
+            Color color = iconGun.color;
+            color.a = 100f;
+            iconGun.color = color;
+        }
+        else
+        {
+            iconGun.sprite = null;
+            Color color = iconGun.color;
+            color.a = 0f;
+            iconGun.color = color;
+        }
         item_drag.GetComponent<Image>().sprite = iconGun.sprite;
+        if(string.IsNullOrWhiteSpace(wpdata.cf.Image))
+        {
+            Color color = item_drag.GetComponent<Image>().color;
+            color.a = 0f;
+            item_drag.GetComponent<Image>().color = color;
+        }
+        else
+        {
+            Color color = item_drag.GetComponent<Image>().color;
+            color.a = 100f;
+            item_drag.GetComponent<Image>().color = color;
+        }
         rect_item_drag = item_drag.GetComponent<RectTransform>();
         this.typeConfig = config;
     }

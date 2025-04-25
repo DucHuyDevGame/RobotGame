@@ -37,3 +37,9 @@ MonoBehaviour:
     name: q
     prefabImage: head4
     movementType: 4
+  - id: 5
+    imageType: 
+    image: 
+    name: op
+    prefabImage: 
+    movementType: 5

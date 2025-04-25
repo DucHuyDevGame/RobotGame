@@ -19,7 +19,7 @@ public class IngameView : BaseView
         cfLevel = GameManager.Instance.cur_cf_Level;
         taskTypeTxt.text = $"Task type: {cfLevel.TaskType}";
         enviromentTxt.text = $"Enviroment: {cfLevel.EnvironmentType}";
-        objectTxt.text = cfLevel.ObjectForRobot ? "Object: Yes" : "Object: No";
+        objectTxt.text = $"{cfLevel.ObjectTypes}";
         levelTxt.text = $"Level {cfLevel.ID}";
         btnRunRobot.gameObject.SetActive(true);
     }
@@ -41,7 +41,6 @@ public class IngameView : BaseView
         {
             if (hit.collider != null)
             {
-                Debug.LogError(hit.collider.gameObject.name);
                 if (hit.collider.GetComponent<IgnoreUI>() != null)
                     return true;
             }

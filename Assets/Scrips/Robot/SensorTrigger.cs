@@ -5,8 +5,8 @@ using UnityEngine;
 public class SensorTrigger : MonoBehaviour
 {
     [SerializeField] float distanceFire;
-    [SerializeField] LayerMask fireLayerMask;
-    [SerializeField] GameObject obstacleCheck;
+    [SerializeField] LayerMask fireLayerMask, objectLayerMask;
+    [SerializeField] GameObject obstacleCheck, fireCheck;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag(Utilities.CheckPoint))
@@ -17,8 +17,18 @@ public class SensorTrigger : MonoBehaviour
     }
     private void Update()
     {
-        if(RobotController.Instance.runRobot)
-            ObstacleFire(obstacleCheck.transform.position, Vector2.right, distanceFire, fireLayerMask);
+        if (!RobotController.Instance.runRobot)
+            return;    
+        ObstacleFire(obstacleCheck.transform.position, Vector2.right, distanceFire, fireLayerMask);
+    }
+    void ObstacleObject(Vector2 origin, Vector2 direction, float distance, LayerMask layer)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(origin, direction, distance, layer);
+        Debug.DrawRay(origin, direction * distance, Color.green);
+        if (hit.collider != null)
+        {
+            Debug.LogError("Hit object");
+        }
     }
     void ObstacleFire(Vector2 origin, Vector2 direction, float distance, LayerMask layer)
     {
@@ -37,8 +47,16 @@ public class SensorTrigger : MonoBehaviour
             else
             {
                 RobotController.Instance.runRobot = false;
+                if(weapons.manipulatorData.manipulatorType == ManipulatorType.FireExtinguisherSpray)
+                    StartCoroutine(WaitTimeRun());
                 Debug.DrawRay(origin, direction * distance, Color.blue);
             }
         }
+    }
+    IEnumerator WaitTimeRun()
+    {
+        yield return new WaitForSeconds(0.2f);
+        fireCheck.SetActive(false);
+        RobotController.Instance.runRobot = true;
     }
 }

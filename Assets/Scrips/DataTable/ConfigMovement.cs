@@ -10,6 +10,8 @@ public enum MovementType
     Tracks = 2,
     Legs = 3,
     JetPack = 4,
+    None = 5,
+    All = 6,
 }
 
 [Serializable]

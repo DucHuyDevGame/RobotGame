@@ -8,6 +8,7 @@ public enum SensorsType
     UltrasonicSensor = 1,
     HeatSensor = 2,
     LightSensor = 3,
+    All = 4,
 }
 
 [Serializable]

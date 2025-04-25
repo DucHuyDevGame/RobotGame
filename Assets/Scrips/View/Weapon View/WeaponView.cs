@@ -23,7 +23,7 @@ public class WeaponView : BaseView
         configLevelRecord = ConfigManager.Instance.configLevel.records[0];
         taskTypeTxt.text = $"Task type: {configLevelRecord.TaskType}";
         enviromentTxt.text = $"Enviroment: {configLevelRecord.EnvironmentType}";
-        objectTxt.text = configLevelRecord.ObjectForRobot ? "Object: Yes" : "Object: No";
+        objectTxt.text = $"{configLevelRecord.ObjectTypes}";
         weaponData = DataController.Instance.ReloadWeapon();
     }
     public override void OnShowView()

@@ -7,7 +7,9 @@ using UnityEngine;
 public enum ManipulatorType
 {
     Gripper = 1,
-    Crane = 2,
+    FireExtinguisherSpray = 2,
+    LightBulb = 3,
+    All = 4,
 }
 
 [Serializable]

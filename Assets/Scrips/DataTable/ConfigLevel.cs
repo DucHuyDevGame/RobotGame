@@ -3,15 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public enum TaskType 
-{ 
-    Navigation = 1, 
-    Transporting = 2, 
+{
+    MoveToPosition = 1,
+    ObstacleTraversal = 2,
+    DeliverWithTraversal = 3,
+    AutoLightOnDark = 4,
+    NavigateAndExtinguish = 5,
 }
 public enum EnvironmentType 
-{ 
-    Water = 1, 
-    FlatGround = 2, 
-    SoilGround = 3 
+{
+    FlatLight = 1,
+    FlatLightToDark = 2,
+}
+[Flags]
+public enum ObjectType
+{
+    None = 0,
+    Fire = 1 << 0,    // 1
+    Obstacle = 1 << 1, // 2
+    Goods = 1 << 2     // 4
 }
 [Serializable]
 public class ConfigLevelRecord
@@ -24,8 +34,11 @@ public class ConfigLevelRecord
     [SerializeField] EnvironmentType environmentType;
     public EnvironmentType EnvironmentType => environmentType;
 
-    [SerializeField] bool objectForRobot;
-    public bool ObjectForRobot => objectForRobot;
+    [SerializeField] ObjectType objectType;
+    public ObjectType ObjectTypes => objectType;
+
+    //[SerializeField] bool objectForRobot;
+    //public bool ObjectForRobot => objectForRobot;
 
     [SerializeField] string sceneName;
     public string SceneName => sceneName;
