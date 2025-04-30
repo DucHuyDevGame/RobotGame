@@ -10,6 +10,7 @@ public enum ManipulatorType
     FireExtinguisherSpray = 2,
     LightBulb = 3,
     All = 4,
+    None =5,
 }
 
 [Serializable]

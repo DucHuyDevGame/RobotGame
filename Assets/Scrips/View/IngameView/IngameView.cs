@@ -10,6 +10,7 @@ public class IngameView : BaseView
     ConfigLevelRecord cfLevel;
     [SerializeField] TMP_Text taskTypeTxt, enviromentTxt, objectTxt, levelTxt;
     [SerializeField] Button btnRunRobot;
+    [SerializeField] float intensity;
     public override void Setup(ViewParam param)
     {
         base.Setup(param);
@@ -22,6 +23,8 @@ public class IngameView : BaseView
         objectTxt.text = $"{cfLevel.ObjectTypes}";
         levelTxt.text = $"Level {cfLevel.ID}";
         btnRunRobot.gameObject.SetActive(true);
+        if (CharacterBufferControl.Instance.lightObjectGlobal != null)
+            CharacterBufferControl.Instance.lightObjectGlobal.intensity = intensity;
     }
     public void OnPause()
     {
@@ -60,5 +63,7 @@ public class IngameView : BaseView
         RobotController.Instance.runRobot = RobotController.Instance.timeStart = true;
         btnRunRobot.gameObject.SetActive(false);
         CharacterBufferControl.Instance.tapEdit.gameObject.SetActive(false);
+        CharacterBufferControl.Instance.robotValidator.CheckRobotCondition(DataController.Instance.ReloadWeapon());
+        CharacterBufferControl.Instance.Setup();
     }
 }

@@ -9,6 +9,7 @@ public enum PowerSourceType
     PowerCore = 1,
     Battery = 2,
     All = 3,
+    None = 4,
 }
 
 [Serializable]

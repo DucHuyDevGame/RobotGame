@@ -406,6 +406,7 @@ MonoBehaviour:
   objectTxt: {fileID: 4752625697973606408}
   levelTxt: {fileID: 4149045659318234677}
   btnRunRobot: {fileID: 219850724229249674}
+  intensity: 0.02
 --- !u!1 &1432608383920869066
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +640,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 390.6641, y: 50}
+  m_SizeDelta: {x: 542.15, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5791321579170664872
 CanvasRenderer:
@@ -696,8 +697,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1058,7 +1059,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 390.6641, y: 50}
+  m_SizeDelta: {x: 542.15, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5311392344578283602
 CanvasRenderer:
@@ -1115,8 +1116,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1372,7 +1373,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 390.6641, y: 50}
+  m_SizeDelta: {x: 542.1454, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &129241727611305909
 CanvasRenderer:
@@ -1429,8 +1430,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

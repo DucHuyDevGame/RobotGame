@@ -22,7 +22,6 @@ public class BootLoader : MonoBehaviour
 
     public void LoadSceneDone()
     {
-        Debug.LogError(" load scene done");
         ViewManager.Instance.SwitchView(ViewIndex.HomeView);
     }
 }

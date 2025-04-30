@@ -10,8 +10,9 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
     [SerializeField] SpriteRenderer movement, manipulator, sensor, powerSource;
     public Transform trans;
     public TMP_Text tapEdit;
-    //public Light2D lightObjectGlobal;
+    public Light2D lightObjectGlobal;
     public Light2D lightObjectSensor;
+    public RobotValidator robotValidator;
     private void Awake()
     {
         trans = transform;
@@ -35,7 +36,7 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
         Setup();
     }
 
-    void Setup()
+    public void Setup()
     {
         weaponData = DataController.Instance.ReloadWeapon();
 
@@ -55,18 +56,17 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
         //        lightObjectGlobal.intensity = 1f;
         //}
         manipulator.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.manipulatorData.image);
-
+        sensor.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.sensorTypeData.image);
+        powerSource.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.powerSourceTypeData.image);
         if (lightObjectSensor != null)
         {
+            if (!RobotController.Instance.runRobot)
+                return;
             if (weaponData.manipulatorData.manipulatorType == ManipulatorType.LightBulb
                 && weaponData.sensorTypeData.sensorType == SensorsType.LightSensor)
                 lightObjectSensor.gameObject.SetActive(true);
             else
                 lightObjectSensor.gameObject.SetActive(false);
         }
-
-        sensor.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.sensorTypeData.image);
-
-        powerSource.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.powerSourceTypeData.image);
     }
 }

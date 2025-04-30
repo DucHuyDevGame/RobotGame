@@ -18,6 +18,8 @@ public class WeaponView : BaseView
         CharacterBufferControl.Instance.tapEdit.gameObject.SetActive(false);
         lockUIObject.SetActive(false);
         tapLargeButtons.Init();
+        if(CharacterBufferControl.Instance.lightObjectGlobal != null)
+            CharacterBufferControl.Instance.lightObjectGlobal.intensity = 1f;
         //CharacterBufferControl.Instance.trans.DOMove(new Vector3(-1.84f, -0.26f, -1f), 0.5f)
         //    .SetEase(Ease.OutQuad);
         configLevelRecord = ConfigManager.Instance.configLevel.records[0];
