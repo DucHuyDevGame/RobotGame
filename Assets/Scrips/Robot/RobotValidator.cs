@@ -16,9 +16,7 @@ public class RobotValidator : MonoBehaviour
                     RobotController.Instance.runRobot = false;
                 break;
             case 2:
-                if (weaponData.movementData.movementType == MovementType.Wheels
-                    && weaponData.sensorTypeData.sensorType == SensorsType.HeatSensor
-                    && weaponData.manipulatorData.manipulatorType == ManipulatorType.FireExtinguisherSpray)
+                if (weaponData.movementData.movementType == MovementType.Wheels)
                     RobotController.Instance.runRobot = true;
                 else
                     RobotController.Instance.runRobot = false;
