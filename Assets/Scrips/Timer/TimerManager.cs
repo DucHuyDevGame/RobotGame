@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TimerManager : MonoBehaviour
 {
-    [SerializeField] float timer;
+    float timer;
     bool isLoseShown = false;
     void Start()
     {
-        //timer = GameManager.Instance.cur_cf_Level.TimeFinished * 60;
+        timer = GameManager.Instance.cur_cf_Level.TimeFinished;
     }
     void Update()
     {
