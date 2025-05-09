@@ -14,20 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   records:
   - id: 1
-    imageType: Assault_Rifle-15_72dpi
     image: WP_5
-    name: a
+    name: Ultrasonic Sensor
     prefabImage: head5
     sensorType: 1
   - id: 2
-    imageType: Handgun-1_72dpi
     image: WP_3
-    name: b
+    name: Heat Sensor
     prefabImage: head6
     sensorType: 2
   - id: 3
-    imageType: Machine_gun-1_72dpi
     image: WP_4
-    name: c
+    name: Light Sensor
     prefabImage: head7
     sensorType: 3

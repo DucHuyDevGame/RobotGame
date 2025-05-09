@@ -15,6 +15,12 @@ public class WeaponView : BaseView
     public override void Setup(ViewParam param)
     {
         base.Setup(param);
+        RobotController.Instance.RigiBody.gravityScale = 0;
+        if(CharacterBufferControl.Instance.wallObject != null)
+            CharacterBufferControl.Instance.wallObject.SetActive(false);
+        if(CharacterBufferControl.Instance.fireObject != null)
+            CharacterBufferControl.Instance.fireObject.SetActive(false);
+        CharacterBufferControl.Instance.ground.SetActive(false);
         CharacterBufferControl.Instance.tapEdit.gameObject.SetActive(false);
         lockUIObject.SetActive(false);
         tapLargeButtons.Init();

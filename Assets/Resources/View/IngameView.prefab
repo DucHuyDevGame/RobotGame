@@ -405,6 +405,7 @@ MonoBehaviour:
   enviromentTxt: {fileID: 6844376980984219588}
   objectTxt: {fileID: 4752625697973606408}
   levelTxt: {fileID: 4149045659318234677}
+  timerTxt: {fileID: 4149045659318234677}
   btnRunRobot: {fileID: 219850724229249674}
   intensity: 0.02
 --- !u!1 &1432608383920869066

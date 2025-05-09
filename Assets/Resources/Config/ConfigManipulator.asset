@@ -15,16 +15,16 @@ MonoBehaviour:
   records:
   - id: 1
     image: WP_1
-    name: m
+    name: Gripper
     prefabImage: body1
     manipulatorType: 1
   - id: 2
     image: WP_2
-    name: n
+    name: "B\xECnh x\u1ECBt ch\u1EEFa ch\xE1y"
     prefabImage: body2
     manipulatorType: 2
   - id: 3
     image: WP_5
-    name: cv
+    name: "\u0110\xE8n"
     prefabImage: body3
     manipulatorType: 3

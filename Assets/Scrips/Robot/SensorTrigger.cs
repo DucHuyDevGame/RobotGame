@@ -1,12 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SensorTrigger : MonoBehaviour
 {
-    [SerializeField] float distanceFire;
-    [SerializeField] LayerMask fireLayerMask, objectLayerMask;
+    [SerializeField] float distanceFire, distanceWall;
+    [SerializeField] LayerMask fireLayerMask, wallLayer;
     [SerializeField] GameObject obstacleCheck, fireCheck;
+    [SerializeField] FireObstacleHandler fireHandler;
+    [SerializeField] WallObstacleHander wallObstacleHander;
+    private void Start()
+    {
+        if(fireHandler != null)
+            fireHandler.Init(RobotController.Instance, DataController.Instance, fireCheck);
+        if (wallObstacleHander != null)
+            wallObstacleHander.Init(RobotController.Instance, DataController.Instance);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag(Utilities.CheckPoint))
@@ -18,45 +28,10 @@ public class SensorTrigger : MonoBehaviour
     private void Update()
     {
         if (!RobotController.Instance.runRobot)
-            return;    
-        ObstacleFire(obstacleCheck.transform.position, Vector2.right, distanceFire, fireLayerMask);
-    }
-    void ObstacleObject(Vector2 origin, Vector2 direction, float distance, LayerMask layer)
-    {
-        RaycastHit2D hit = Physics2D.Raycast(origin, direction, distance, layer);
-        Debug.DrawRay(origin, direction * distance, Color.green);
-        if (hit.collider != null)
-        {
-            Debug.LogError("Hit object");
-        }
-    }
-    void ObstacleFire(Vector2 origin, Vector2 direction, float distance, LayerMask layer)
-    {
-        RaycastHit2D hit = Physics2D.Raycast(origin, direction, distance,layer);
-        Debug.DrawRay(origin, direction * distance, Color.green);
-        if (hit.collider != null)
-        {
-            WeaponsData weapons = DataController.Instance.ReloadWeapon();
-            if (weapons.sensorTypeData.sensorType != SensorsType.HeatSensor)
-            {
-                RobotController.Instance.runRobot = false;
-                DialogManager.Instance.ShowDialog(DialogIndex.DiedDialog);
-                Debug.DrawRay(origin, direction * distance, Color.red);
-                return;
-            }
-            else
-            {
-                RobotController.Instance.runRobot = false;
-                if(weapons.manipulatorData.manipulatorType == ManipulatorType.FireExtinguisherSpray)
-                    StartCoroutine(WaitTimeRun());
-                Debug.DrawRay(origin, direction * distance, Color.blue);
-            }
-        }
-    }
-    IEnumerator WaitTimeRun()
-    {
-        yield return new WaitForSeconds(0.2f);
-        fireCheck.SetActive(false);
-        RobotController.Instance.runRobot = true;
+            return;
+        if (fireHandler!= null)
+            fireHandler.HandleObstacle(obstacleCheck.transform.position, Vector2.right, distanceFire, fireLayerMask);
+        if (wallObstacleHander!= null)
+            wallObstacleHander.HandleObstacle(obstacleCheck.transform.position, Vector2.right, distanceWall, wallLayer);
     }
 }

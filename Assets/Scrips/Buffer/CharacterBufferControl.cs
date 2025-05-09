@@ -13,6 +13,7 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
     public Light2D lightObjectGlobal;
     public Light2D lightObjectSensor;
     public RobotValidator robotValidator;
+    public GameObject wallObject, fireObject, ground, gripperObject;
     private void Awake()
     {
         trans = transform;
@@ -68,5 +69,10 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
             else
                 lightObjectSensor.gameObject.SetActive(false);
         }
+    }
+    public void AddGripperObject()
+    {
+        GameObject obj = Instantiate(Resources.Load("Object/ObjectRobot", typeof(GameObject)), Vector3.zero, Quaternion.identity) as GameObject;
+        gripperObject.transform.SetParent(obj.transform, false);
     }
 }

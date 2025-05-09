@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class TimerManager : MonoBehaviour
+public class TimerManager : BYSingletonMono<TimerManager>
 {
     float timer;
     bool isLoseShown = false;
+    public UnityEvent<float> timerUpdate;
     void Start()
     {
         timer = GameManager.Instance.cur_cf_Level.TimeFinished;
@@ -20,8 +22,10 @@ public class TimerManager : MonoBehaviour
         if (timer <= 0)
         {
             isLoseShown = true;
+            timerUpdate?.Invoke(timer);
             DialogManager.Instance.ShowDialog(DialogIndex.LoseDialog);
             return;
         }
+        timerUpdate?.Invoke(timer);
     }
 }

@@ -14,31 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   records:
   - id: 1
-    imageType: Assault_Rifle-15_72dpi
     image: WP_5
-    name: j
-    prefabImage: head1
+    name: "B\xE1nh xe"
+    prefabImage: head 1
     movementType: 1
   - id: 2
-    imageType: Handgun-1_72dpi
     image: WP_3
     name: k
     prefabImage: head2
     movementType: 2
   - id: 3
-    imageType: Machine_gun-1_72dpi
     image: WP_4
     name: l
     prefabImage: head3
     movementType: 3
   - id: 4
-    imageType: Shotgun-6_72dpi
     image: WP_1
     name: q
     prefabImage: head4
     movementType: 4
   - id: 5
-    imageType: 
     image: 
     name: op
     prefabImage: 
