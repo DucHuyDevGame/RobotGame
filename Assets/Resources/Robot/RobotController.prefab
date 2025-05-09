@@ -232,6 +232,7 @@ MonoBehaviour:
   wallObject: {fileID: 0}
   fireObject: {fileID: 0}
   ground: {fileID: 0}
+  gripperObject: {fileID: 847036681452391204}
 --- !u!114 &7205127205171170763
 MonoBehaviour:
   m_ObjectHideFlags: 0

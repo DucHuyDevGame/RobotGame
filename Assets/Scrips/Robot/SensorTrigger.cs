@@ -6,16 +6,19 @@ using UnityEngine;
 public class SensorTrigger : MonoBehaviour
 {
     [SerializeField] float distanceFire, distanceWall;
-    [SerializeField] LayerMask fireLayerMask, wallLayer;
-    [SerializeField] GameObject obstacleCheck, fireCheck;
+    [SerializeField] LayerMask fireLayerMask, wallLayer, objectLayer;
+    [SerializeField] GameObject obstacleCheck, fireCheck, objectCheck;
     [SerializeField] FireObstacleHandler fireHandler;
     [SerializeField] WallObstacleHander wallObstacleHander;
+    [SerializeField] ObjectObstacleHandler obstacleHandler;
     private void Start()
     {
         if(fireHandler != null)
             fireHandler.Init(RobotController.Instance, DataController.Instance, fireCheck);
         if (wallObstacleHander != null)
             wallObstacleHander.Init(RobotController.Instance, DataController.Instance);
+        if (obstacleHandler != null)
+            obstacleHandler.Init(RobotController.Instance, DataController.Instance, objectCheck);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,5 +36,7 @@ public class SensorTrigger : MonoBehaviour
             fireHandler.HandleObstacle(obstacleCheck.transform.position, Vector2.right, distanceFire, fireLayerMask);
         if (wallObstacleHander!= null)
             wallObstacleHander.HandleObstacle(obstacleCheck.transform.position, Vector2.right, distanceWall, wallLayer);
+        if (obstacleHandler != null)
+            obstacleHandler.HandleObstacle(obstacleCheck.transform.position, Vector2.right, distanceWall, objectLayer);
     }
 }

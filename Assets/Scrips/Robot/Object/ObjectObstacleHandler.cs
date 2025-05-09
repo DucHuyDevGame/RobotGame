@@ -6,10 +6,12 @@ public class ObjectObstacleHandler : MonoBehaviour ,IObstacleHandler
 {
     private RobotController robot;
     private DataController data;
-    public void Init(RobotController robot, DataController data)
+    private GameObject objectGame;
+    public void Init(RobotController robot, DataController data, GameObject objectGame)
     {
         this.robot = robot;
         this.data = data;
+        this.objectGame = objectGame;
     }
 
     public void HandleObstacle(Vector2 origin, Vector2 direction, float distance, LayerMask layer)
@@ -24,7 +26,11 @@ public class ObjectObstacleHandler : MonoBehaviour ,IObstacleHandler
             if (weapons.manipulatorData.manipulatorType != ManipulatorType.Gripper)
                 robot.runRobot = false;
             else
+            {
+                objectGame.SetActive(false); 
                 CharacterBufferControl.Instance.AddGripperObject();
+            }
+
         }
         else
         {
