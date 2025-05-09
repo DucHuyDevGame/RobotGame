@@ -22,7 +22,10 @@ public class RobotValidator : MonoBehaviour
                     RobotController.Instance.runRobot = false;
                 break;
             case 3:
-                
+                if (weaponData.movementData.movementType == MovementType.Wheels)
+                    RobotController.Instance.runRobot = true;
+                else
+                    RobotController.Instance.runRobot = false;
                 break;
             case 4:
                 if (weaponData.movementData.movementType == MovementType.Wheels

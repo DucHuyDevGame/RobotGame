@@ -382,6 +382,14 @@ PrefabInstance:
       propertyPath: wallObject
       value: 
       objectReference: {fileID: 6866239396776148026}
+    - target: {fileID: 7205127205171170763, guid: f8cf5ff33be4fa147b8a82093bb7c740, type: 3}
+      propertyPath: distanceWall
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7205127205171170763, guid: f8cf5ff33be4fa147b8a82093bb7c740, type: 3}
+      propertyPath: wallObstacleHander
+      value: 
+      objectReference: {fileID: 7614053288345619814}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

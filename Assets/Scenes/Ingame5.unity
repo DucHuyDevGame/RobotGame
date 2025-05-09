@@ -382,6 +382,14 @@ PrefabInstance:
       propertyPath: fireObject
       value: 
       objectReference: {fileID: 1240434998}
+    - target: {fileID: 7205127205171170763, guid: f8cf5ff33be4fa147b8a82093bb7c740, type: 3}
+      propertyPath: fireCheck
+      value: 
+      objectReference: {fileID: 1240434998}
+    - target: {fileID: 7205127205171170763, guid: f8cf5ff33be4fa147b8a82093bb7c740, type: 3}
+      propertyPath: fireHandler
+      value: 
+      objectReference: {fileID: 1240435003}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

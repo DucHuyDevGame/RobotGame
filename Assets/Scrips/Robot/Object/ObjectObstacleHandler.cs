@@ -21,7 +21,7 @@ public class ObjectObstacleHandler : MonoBehaviour ,IObstacleHandler
         if (hit.collider == null)
             return;
         WeaponsData weapons = data.ReloadWeapon();
-        if(weapons.sensorTypeData.sensorType != SensorsType.UltrasonicSensor)
+        if(weapons.sensorTypeData.sensorType == SensorsType.UltrasonicSensor)
         {
             if (weapons.manipulatorData.manipulatorType != ManipulatorType.Gripper)
                 robot.runRobot = false;

@@ -16,7 +16,7 @@ MonoBehaviour:
   - id: 1
     image: WP_5
     name: "B\xE1nh xe"
-    prefabImage: head 1
+    prefabImage: head1
     movementType: 1
   - id: 2
     image: WP_3

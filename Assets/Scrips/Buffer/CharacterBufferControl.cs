@@ -64,7 +64,8 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
             if (!RobotController.Instance.runRobot)
                 return;
             if (weaponData.manipulatorData.manipulatorType == ManipulatorType.LightBulb
-                && weaponData.sensorTypeData.sensorType == SensorsType.LightSensor)
+                && weaponData.sensorTypeData.sensorType == SensorsType.LightSensor
+                && GameManager.Instance.cur_cf_Level.ID == 4)
                 lightObjectSensor.gameObject.SetActive(true);
             else
                 lightObjectSensor.gameObject.SetActive(false);
@@ -73,6 +74,8 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
     public void AddGripperObject()
     {
         GameObject obj = Instantiate(Resources.Load("Object/ObjectRobot", typeof(GameObject)), Vector3.zero, Quaternion.identity) as GameObject;
-        gripperObject.transform.SetParent(obj.transform, false);
+        obj.transform.SetParent(gripperObject.transform, false);
+
     }
+
 }
