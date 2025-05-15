@@ -94,16 +94,6 @@ public class WeaponViewGunList : MonoBehaviour, IEnhancedScrollerDelegate
         scroller.JumpToDataIndex(0);
         Invoke(nameof(DelayJump), 0.1f);
     }
-    public void ButtonFour()
-    {
-        data_list = new List<WeaponListData>();
-        typeConfig = "PowerSource";
-        foreach (ConfigPowerSourceRecord cf in ConfigManager.Instance.configPowerSource.records)
-            data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
-        scroller.ReloadData();
-        scroller.JumpToDataIndex(0);
-        Invoke(nameof(DelayJump), 0.1f);
-    }
     //public void SetUpConfig(ConfigType type)
     //{
     //    if (type == ConfigType.Movement)

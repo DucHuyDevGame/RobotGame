@@ -9,7 +9,6 @@ public class ConfigManager : BYSingletonMono<ConfigManager>
     public ConfigShop configShop;
     public ConfigMovement configMovement;
     public ConfigSensor configSensor;
-    public ConfigPowerSource configPowerSource;
     public ConfigLevel configLevel;
 
     public void InitConfig(Action callback)
@@ -29,9 +28,6 @@ public class ConfigManager : BYSingletonMono<ConfigManager>
 
         configSensor = Resources.Load("Config/ConfigSensor", typeof(ScriptableObject)) as ConfigSensor;
         yield return new WaitUntil(() => configSensor != null);
-
-        configPowerSource = Resources.Load("Config/ConfigPowerSource", typeof(ScriptableObject)) as ConfigPowerSource;
-        yield return new WaitUntil(() => configPowerSource != null);
 
         configLevel = Resources.Load("Config/ConfigLevel", typeof(ScriptableObject)) as ConfigLevel;
         yield return new WaitUntil(() => configLevel != null);

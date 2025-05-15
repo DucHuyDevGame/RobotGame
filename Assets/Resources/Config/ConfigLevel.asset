@@ -20,7 +20,6 @@ MonoBehaviour:
     sceneName: Ingame1
     manipulatorType: 4
     movementType: 1
-    powerSourceType: 3
     sensorsType: 4
     start: 0
     missionName: 1
@@ -32,7 +31,6 @@ MonoBehaviour:
     sceneName: Ingame2
     manipulatorType: 4
     movementType: 1
-    powerSourceType: 3
     sensorsType: 1
     start: 0
     missionName: 2
@@ -44,7 +42,6 @@ MonoBehaviour:
     sceneName: Ingame3
     manipulatorType: 1
     movementType: 1
-    powerSourceType: 3
     sensorsType: 1
     start: 0
     missionName: 3
@@ -56,7 +53,6 @@ MonoBehaviour:
     sceneName: Ingame4
     manipulatorType: 3
     movementType: 6
-    powerSourceType: 3
     sensorsType: 3
     start: 0
     missionName: 4
@@ -68,7 +64,6 @@ MonoBehaviour:
     sceneName: Ingame5
     manipulatorType: 2
     movementType: 1
-    powerSourceType: 3
     sensorsType: 2
     start: 0
     missionName: 5
@@ -77,83 +72,76 @@ MonoBehaviour:
     taskType: 5
     environmentType: 1
     objectType: 1
-    sceneName: Ingame
+    sceneName: Ingame6
     manipulatorType: 2
     movementType: 1
-    powerSourceType: 3
     sensorsType: 2
     start: 0
-    missionName: 5
+    missionName: 6
     timeFinished: 30
   - id: 7
     taskType: 5
     environmentType: 1
     objectType: 1
-    sceneName: Ingame
+    sceneName: Ingame7
     manipulatorType: 2
     movementType: 1
-    powerSourceType: 3
     sensorsType: 2
     start: 0
-    missionName: 5
+    missionName: 7
     timeFinished: 30
   - id: 8
     taskType: 5
     environmentType: 1
     objectType: 1
-    sceneName: Ingame
+    sceneName: Ingame8
     manipulatorType: 2
     movementType: 1
-    powerSourceType: 3
     sensorsType: 2
     start: 0
-    missionName: 5
+    missionName: 8
     timeFinished: 30
   - id: 9
     taskType: 5
     environmentType: 1
     objectType: 1
-    sceneName: Ingame
+    sceneName: Ingame9
     manipulatorType: 2
     movementType: 1
-    powerSourceType: 3
     sensorsType: 2
     start: 0
-    missionName: 5
+    missionName: 9
     timeFinished: 0
   - id: 10
     taskType: 5
     environmentType: 1
     objectType: 1
-    sceneName: Ingame
+    sceneName: Ingame10
     manipulatorType: 2
     movementType: 1
-    powerSourceType: 3
     sensorsType: 2
     start: 0
-    missionName: 5
+    missionName: 10
     timeFinished: 0
   - id: 11
     taskType: 5
     environmentType: 1
     objectType: 1
-    sceneName: Ingame
+    sceneName: Ingame11
     manipulatorType: 2
     movementType: 1
-    powerSourceType: 3
     sensorsType: 2
     start: 0
-    missionName: 5
+    missionName: 11
     timeFinished: 0
   - id: 12
     taskType: 5
     environmentType: 1
     objectType: 1
-    sceneName: Ingame
+    sceneName: Ingame12
     manipulatorType: 2
     movementType: 1
-    powerSourceType: 3
     sensorsType: 2
     start: 0
-    missionName: 5
+    missionName: 12
     timeFinished: 0

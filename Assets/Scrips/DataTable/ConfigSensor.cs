@@ -10,6 +10,11 @@ public enum SensorsType
     LightSensor = 3,
     All = 4,
     None = 5,
+    TouchSensor = 6,
+    ColorSensor = 7,
+    GyroscopeSensor = 7,
+    Speaker = 8,
+    CameraSensor = 9,
 }
 
 [Serializable]

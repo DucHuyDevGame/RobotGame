@@ -76,12 +76,6 @@ public class DataController : BYSingletonMono<DataController>
             weaponsData.sensorTypeData.image = cf.PrefabImage;
             weaponsData.sensorTypeData.sensorType = cf.SensorType;
         }
-        else if(typeConfig.Equals("PowerSource"))
-        {
-            ConfigPowerSourceRecord cf = ConfigManager.Instance.configPowerSource.GetRecordName(name);
-            weaponsData.powerSourceTypeData.image = cf.PrefabImage;
-            weaponsData.powerSourceTypeData.powerSourceType = cf.PowerSourceType;
-        }
         dataModel.UpdateData(DataSchema.WEAPON, weaponsData);
     }
     public List<MissionData> GetMissionData()

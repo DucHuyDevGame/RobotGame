@@ -49,9 +49,6 @@ public class ConfigLevelRecord
     [SerializeField] MovementType movementType;
     public MovementType MovementType => movementType;
 
-    [SerializeField] PowerSourceType powerSourceType;
-    public PowerSourceType PowerSourceType => powerSourceType;
-
     [SerializeField] SensorsType sensorsType;
     public SensorsType SensorsType => sensorsType;
 

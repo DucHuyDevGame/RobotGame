@@ -7,7 +7,7 @@ using UnityEngine.Rendering.Universal;
 public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
 {
     WeaponsData weaponData;
-    [SerializeField] SpriteRenderer movement, manipulator, sensor, powerSource;
+    [SerializeField] SpriteRenderer movement, manipulator, sensor;
     public Transform trans;
     public TMP_Text tapEdit;
     public Light2D lightObjectGlobal;
@@ -58,7 +58,6 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
         //}
         manipulator.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.manipulatorData.image);
         sensor.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.sensorTypeData.image);
-        powerSource.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.powerSourceTypeData.image);
         if (lightObjectSensor != null)
         {
             if (!RobotController.Instance.runRobot)

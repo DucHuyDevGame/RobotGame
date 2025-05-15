@@ -40,7 +40,6 @@ public class WeaponsData
     public MovementData movementData;
     public ManipulatorData manipulatorData;
     public SensorData sensorTypeData;
-    public PowerSourceData powerSourceTypeData;
 }
 [Serializable]
 public class MovementData
@@ -59,13 +58,6 @@ public class SensorData
 {
     public string image;
     public SensorsType sensorType;
-}
-
-[Serializable]
-public class PowerSourceData
-{
-    public string image;
-    public PowerSourceType powerSourceType;
 }
 [Serializable]
 public class PlayerMissionData

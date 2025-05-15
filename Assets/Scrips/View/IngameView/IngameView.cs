@@ -83,7 +83,7 @@ public class IngameView : BaseView
     }
     public void RunRobot()
     {
-        RobotController.Instance.runRobot = RobotController.Instance.timeStart = true;
+        RobotController.Instance.timeStart = true;
         btnRunRobot.gameObject.SetActive(false);
         CharacterBufferControl.Instance.tapEdit.gameObject.SetActive(false);
         CharacterBufferControl.Instance.robotValidator.CheckRobotCondition(DataController.Instance.ReloadWeapon());
