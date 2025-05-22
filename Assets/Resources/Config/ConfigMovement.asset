@@ -18,18 +18,22 @@ MonoBehaviour:
     name: "B\xE1nh xe"
     prefabImage: head1
     movementType: 1
+    speed: 8
   - id: 2
     image: WP_3
     name: "X\xEDch"
     prefabImage: head2
     movementType: 2
+    speed: 5
   - id: 3
     image: WP_4
     name: "Ch\xE2n robot"
     prefabImage: head3
     movementType: 4
+    speed: 2
   - id: 4
     image: 
     name: None
     prefabImage: 
     movementType: 0
+    speed: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using EnhancedUI.EnhancedScroller;
+using System.Linq;
 public class WeaponListData
 {
     public ConfigRecordBase cf;
@@ -71,8 +72,10 @@ public class WeaponViewGunList : MonoBehaviour, IEnhancedScrollerDelegate
         typeConfig = "Movement";
         foreach (ConfigMovementRecord cf in ConfigManager.Instance.configMovement.records)
         {
-            //if(GameManager.Instance.cur_cf_Level.ID == 1 && cf.MovementType == MovementType.Tracks)
-            //    continue;
+            if (Enumerable.Range(1, 5).Contains(GameManager.Instance.cur_cf_Level.ID) 
+                && cf.MovementType == MovementType.Tracks)
+                continue;
+
             data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
         }
         scroller.ReloadData();

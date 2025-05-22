@@ -84,6 +84,7 @@ public class IngameView : BaseView
     }
     public void RunRobot()
     {
+        RobotController.Instance.Speed = ConfigManager.Instance.configMovement.GetRecordSpeed(DataController.Instance.ReloadWeapon().movementData.movementType);
         RobotController.Instance.timeStart = true;
         btnRunRobot.gameObject.SetActive(false);
         CharacterBufferControl.Instance.tapEdit.gameObject.SetActive(false);

@@ -8,7 +8,12 @@ public class RobotController : BYSingletonMono<RobotController>
     public bool runRobot, timeStart;
     [SerializeField] Rigidbody2D rigi;
     public Rigidbody2D RigiBody => rigi;
-    [SerializeField] float timeSpeed;
+    [SerializeField] float speed;
+    public float Speed
+    {
+        get { return speed; }
+        set { speed = value; }
+    }
     [SerializeField] float jumpForce = 5f;
     [SerializeField] Vector2 sizeRobot;
     [SerializeField] LayerMask groundLayer;
@@ -25,7 +30,7 @@ public class RobotController : BYSingletonMono<RobotController>
         else
         {
             if(IsGrounded() && rigi!=null)
-                rigi.velocity = new Vector2(moveDirection.x * timeSpeed, rigi.velocity.y);
+                rigi.velocity = new Vector2(moveDirection.x * speed, rigi.velocity.y);
         }
     }
     public void Jump()

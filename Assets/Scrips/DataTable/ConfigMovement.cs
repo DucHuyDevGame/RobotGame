@@ -20,6 +20,9 @@ public class ConfigMovementRecord : ConfigRecordBase
 {
     [SerializeField] MovementType movementType;
     public MovementType MovementType => movementType;
+
+    [SerializeField] float speed;
+    public float Speed => speed;
 }
 
 public class ConfigMovement : BYDataTable<ConfigMovementRecord>
@@ -33,6 +36,10 @@ public class ConfigMovement : BYDataTable<ConfigMovementRecord>
     //{
     //    return records.Where(x => x.MovementType == mv_Type).ToList();
     //}
+    public float GetRecordSpeed(MovementType mvType)
+    {
+        return records.FirstOrDefault(x=>x.MovementType == mvType).Speed;
+    }
     public ConfigMovementRecord GetRecordName(string name)
     {
         return records.Where(x => x.Name.Equals(name)).FirstOrDefault();
