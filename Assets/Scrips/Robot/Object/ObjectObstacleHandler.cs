@@ -21,21 +21,31 @@ public class ObjectObstacleHandler : MonoBehaviour ,IObstacleHandler
         if (hit.collider == null)
             return;
         WeaponsData weapons = data.ReloadWeapon();
-        if(weapons.sensorTypeData.sensorType == SensorsType.UltrasonicSensor)
-        {
-            if (weapons.manipulatorData.manipulatorType != ManipulatorType.Gripper)
-                robot.runRobot = false;
-            else
-            {
-                objectGame.SetActive(false); 
-                CharacterBufferControl.Instance.AddGripperObject();
-            }
-
-        }
+        if (weapons.movementData.movementType != MovementType.Legs)
+            robot.runRobot = false;
         else
         {
-            robot.runRobot = false;
-            DialogManager.Instance.ShowDialog(DialogIndex.DiedDialog);
+            if (weapons.sensorTypeData.sensorType == SensorsType.UltrasonicSensor)
+            {
+                if (weapons.manipulatorData.manipulatorType != ManipulatorType.Gripper)
+                    robot.Jump();
+                else
+                {
+                    robot.Jump();
+                    StartCoroutine(WaitForGround());
+                }
+
+            }
+            else
+                robot.runRobot = false;
         }
     }
+    IEnumerator WaitForGround()
+    {
+        while (!robot.IsGrounded())
+            yield return null;
+        objectGame.SetActive(false);
+        CharacterBufferControl.Instance.AddGripperObject();
+    }
+
 }

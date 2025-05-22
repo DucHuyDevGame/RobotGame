@@ -27,9 +27,9 @@ MonoBehaviour:
     image: WP_4
     name: "Ch\xE2n robot"
     prefabImage: head3
-    movementType: 3
+    movementType: 4
   - id: 4
     image: 
-    name: 
+    name: None
     prefabImage: 
-    movementType: 5
+    movementType: 0

@@ -33,6 +33,7 @@ public class WeaponViewGunList : MonoBehaviour, IEnhancedScrollerDelegate
         // first, we get a cell from the scroller by passing a prefab.
         // if the scroller finds one it can recycle it will do so, otherwise
         // it will create a new cell.
+
         WeaponViewGunListItem cellView = scroller.GetCellView(cellViewPrefab) as WeaponViewGunListItem;
 
         // set the name of the game object to the cell's data index.
@@ -69,7 +70,11 @@ public class WeaponViewGunList : MonoBehaviour, IEnhancedScrollerDelegate
         data_list = new List<WeaponListData>();
         typeConfig = "Movement";
         foreach (ConfigMovementRecord cf in ConfigManager.Instance.configMovement.records)
+        {
+            //if(GameManager.Instance.cur_cf_Level.ID == 1 && cf.MovementType == MovementType.Tracks)
+            //    continue;
             data_list.Add(new WeaponListData { cf = cf, weaponView = weaponView });
+        }
         scroller.ReloadData();
         scroller.JumpToDataIndex(0);
         Invoke(nameof(DelayJump), 0.1f);

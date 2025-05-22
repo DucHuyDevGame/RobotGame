@@ -20,11 +20,11 @@ public class RobotController : BYSingletonMono<RobotController>
     }
     void FixedUpdate()
     {
-        if(!runRobot)
+        if(!runRobot && rigi!=null)
             rigi.velocity = Vector2.zero;
         else
         {
-            if(IsGrounded())
+            if(IsGrounded() && rigi!=null)
                 rigi.velocity = new Vector2(moveDirection.x * timeSpeed, rigi.velocity.y);
         }
     }
@@ -36,7 +36,7 @@ public class RobotController : BYSingletonMono<RobotController>
         Vector2 jumpDirection = (Vector2.up + moveDirection).normalized;
         rigi.AddForce(jumpDirection * jumpForce, ForceMode2D.Impulse);
     }
-    bool IsGrounded()
+    public bool IsGrounded()
     {
         return Physics2D.BoxCast(transform.position, sizeRobot, 0, -transform.up, roundDistance, groundLayer);
     }

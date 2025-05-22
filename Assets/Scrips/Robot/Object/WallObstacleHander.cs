@@ -21,14 +21,13 @@ public class WallObstacleHander : MonoBehaviour, IObstacleHandler
         WeaponsData weapons = data.ReloadWeapon();
         if(GameManager.Instance.cur_cf_Level.ID != 4)
         {
-            if(weapons.movementData.movementType == MovementType.Wheels || weapons.movementData.movementType == MovementType.Tracks)
+            if(weapons.movementData.movementType != MovementType.Legs)
                 robot.runRobot = false;
             else
             {
                 if (weapons.sensorTypeData.sensorType != SensorsType.UltrasonicSensor)
                 {
                     robot.runRobot = false;
-                    DialogManager.Instance.ShowDialog(DialogIndex.DiedDialog);
                     Debug.DrawRay(origin, direction * distance, Color.red);
                     return;
                 }
@@ -39,10 +38,17 @@ public class WallObstacleHander : MonoBehaviour, IObstacleHandler
         }
         else
         {
-            if (weapons.movementData.movementType == MovementType.Legs)
-                robot.Jump();
-            else
+            if (weapons.movementData.movementType != MovementType.Legs)
                 robot.runRobot = false;
+            else
+            {
+                if (weapons.sensorTypeData.sensorType == SensorsType.LightSensor
+                && weapons.manipulatorData.manipulatorType == ManipulatorType.LightBulb)
+                    robot.Jump();
+                else
+                    robot.runRobot = false;
+            }
+            
         }
         
     }

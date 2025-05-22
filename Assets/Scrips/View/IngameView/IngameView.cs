@@ -52,6 +52,7 @@ public class IngameView : BaseView
     public void OnPause()
     {
         //DialogManager.Instance.ShowDialog(DialogIndex.PauseDialog);
+        RobotController.Instance.gameObject.SetActive(false);
         ViewManager.Instance.SwitchView(ViewIndex.EmptyView);
         LoadSceneManager.Instance.LoadSceneByIndex(1, false, () =>
         {

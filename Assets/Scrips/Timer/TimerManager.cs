@@ -7,7 +7,8 @@ public class TimerManager : BYSingletonMono<TimerManager>
 {
     float timer;
     bool isLoseShown = false;
-    public UnityEvent<float> timerUpdate;
+    public UnityEvent<float> timerUpdate = new UnityEvent<float>();
+
     void Start()
     {
         timer = GameManager.Instance.cur_cf_Level.TimeFinished;
@@ -21,6 +22,7 @@ public class TimerManager : BYSingletonMono<TimerManager>
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
+            timer = 0;
             isLoseShown = true;
             timerUpdate?.Invoke(timer);
             DialogManager.Instance.ShowDialog(DialogIndex.LoseDialog);

@@ -98,6 +98,8 @@ public class DataController : BYSingletonMono<DataController>
             {
                 if (id + 1 == missionData.id)
                 {
+                    if (missionData.missionComplete)
+                        continue;
                     missionData.missionComplete = false;
                     missionData.star = 0;
                     break;
@@ -119,6 +121,8 @@ public class DataController : BYSingletonMono<DataController>
             {
                 if (missionDatasList[i].id == id + 1)
                 {
+                    if (missionDatasList[i].missionComplete == true)
+                        continue;
                     missionDatasList[i].missionComplete = false;
                     missionDatasList[i].star = 0;
                     break;

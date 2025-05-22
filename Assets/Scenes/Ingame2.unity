@@ -374,6 +374,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1435114555005929779, guid: f8cf5ff33be4fa147b8a82093bb7c740, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5903275654352254178, guid: f8cf5ff33be4fa147b8a82093bb7c740, type: 3}
       propertyPath: ground
       value: 
@@ -382,10 +386,6 @@ PrefabInstance:
       propertyPath: wallObject
       value: 
       objectReference: {fileID: 401491450985772981}
-    - target: {fileID: 7205127205171170763, guid: f8cf5ff33be4fa147b8a82093bb7c740, type: 3}
-      propertyPath: distanceWall
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 7205127205171170763, guid: f8cf5ff33be4fa147b8a82093bb7c740, type: 3}
       propertyPath: wallObstacleHander
       value: 

@@ -137,14 +137,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.37, y: 0.39}
+    - - {x: 0.34665352, y: 0.35264552}
       - {x: 0.34, y: 0.42}
       - {x: -0.42999998, y: 0.42}
       - {x: -0.42999998, y: -0.42}
       - {x: 0.32999998, y: -0.42}
-      - {x: 0.38, y: -0.39999998}
-      - {x: 0.42999998, y: -0.16}
-      - {x: 0.42999998, y: 0.19}
+      - {x: 0.3333069, y: -0.39533052}
+      - {x: 0.35062185, y: -0.20202371}
+      - {x: 0.34128347, y: 0.17599204}
   m_UseDelaunayMesh: 0
 --- !u!50 &1666226207438535056
 Rigidbody2D:
@@ -223,7 +223,6 @@ MonoBehaviour:
   movement: {fileID: 3136538624962539}
   manipulator: {fileID: 632849725915431868}
   sensor: {fileID: 53189305076987406}
-  powerSource: {fileID: 6460083319250952265}
   trans: {fileID: 0}
   tapEdit: {fileID: 5347366114287701940}
   lightObjectGlobal: {fileID: 0}
@@ -246,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceFire: 0.1
-  distanceWall: 1
+  distanceWall: 0.5
   fireLayerMask:
     serializedVersion: 2
     m_Bits: 128
@@ -616,7 +615,7 @@ Transform:
   m_GameObject: {fileID: 5574314006039066148}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.55, y: 0, z: 0}
+  m_LocalPosition: {x: 0.391, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -19,7 +19,7 @@ MonoBehaviour:
     objectType: 0
     sceneName: Ingame1
     manipulatorType: 4
-    movementType: 1
+    movementType: -1
     sensorsType: 4
     start: 0
     missionName: 1
@@ -30,7 +30,7 @@ MonoBehaviour:
     objectType: 2
     sceneName: Ingame2
     manipulatorType: 4
-    movementType: 1
+    movementType: 4
     sensorsType: 1
     start: 0
     missionName: 2
@@ -41,7 +41,7 @@ MonoBehaviour:
     objectType: 6
     sceneName: Ingame3
     manipulatorType: 1
-    movementType: 1
+    movementType: 4
     sensorsType: 1
     start: 0
     missionName: 3
@@ -52,7 +52,7 @@ MonoBehaviour:
     objectType: 0
     sceneName: Ingame4
     manipulatorType: 3
-    movementType: 6
+    movementType: 4
     sensorsType: 3
     start: 0
     missionName: 4
@@ -63,7 +63,7 @@ MonoBehaviour:
     objectType: 1
     sceneName: Ingame5
     manipulatorType: 2
-    movementType: 1
+    movementType: -1
     sensorsType: 2
     start: 0
     missionName: 5
