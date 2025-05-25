@@ -34,9 +34,11 @@ public class RobotValidator : MonoBehaviour
                     RobotController.Instance.runRobot = false;
                 break;
             case 4:
-                if (weaponData.movementData.movementType == MovementType.Wheels
-                    || weaponData.movementData.movementType == MovementType.Legs
-                    || weaponData.movementData.movementType == MovementType.Tracks)
+                if ((weaponData.movementData.movementType == MovementType.Wheels
+                     ||weaponData.movementData.movementType == MovementType.Tracks
+                     ||weaponData.movementData.movementType == MovementType.Legs)
+                    && weaponData.manipulatorData.manipulatorType == ManipulatorType.LightBulb
+                    && weaponData.sensorTypeData.sensorType == SensorsType.LightSensor)
                     RobotController.Instance.runRobot = true;
                 else
                     RobotController.Instance.runRobot = false;

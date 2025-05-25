@@ -31,8 +31,8 @@ public class ObjectObstacleHandler : MonoBehaviour ,IObstacleHandler
                     robot.Jump();
                 else
                 {
-                    robot.Jump();
-                    StartCoroutine(WaitForGround());
+                    objectGame.SetActive(false);
+                    CharacterBufferControl.Instance.AddGripperObject();
                 }
 
             }
@@ -40,12 +40,4 @@ public class ObjectObstacleHandler : MonoBehaviour ,IObstacleHandler
                 robot.runRobot = false;
         }
     }
-    IEnumerator WaitForGround()
-    {
-        while (!robot.IsGrounded())
-            yield return null;
-        objectGame.SetActive(false);
-        CharacterBufferControl.Instance.AddGripperObject();
-    }
-
 }
