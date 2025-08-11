@@ -14,26 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   records:
   - id: 1
-    image: WP_5
+    image: "B\xE1nh xe"
     name: "B\xE1nh xe"
-    prefabImage: head1
+    prefabImage: "B\xE1nh xe"
+    sizeDeltaX: 154
+    sizeDeltaY: 156
     movementType: 1
     speed: 8
   - id: 2
-    image: WP_3
-    name: "X\xEDch"
-    prefabImage: head2
-    movementType: 2
-    speed: 5
-  - id: 3
-    image: WP_4
+    image: "Ch\xE2n robot"
     name: "Ch\xE2n robot"
-    prefabImage: head3
+    prefabImage: "Ch\xE2n robot"
+    sizeDeltaX: 154
+    sizeDeltaY: 156
     movementType: 4
     speed: 2
-  - id: 4
+  - id: 3
     image: 
     name: None
     prefabImage: 
+    sizeDeltaX: 154
+    sizeDeltaY: 156
     movementType: 0
     speed: 0

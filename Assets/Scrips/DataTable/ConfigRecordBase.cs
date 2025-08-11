@@ -17,4 +17,10 @@ public class ConfigRecordBase
 
     [SerializeField] protected string prefabImage;
     public string PrefabImage => prefabImage;
+
+    [SerializeField] protected float sizeDeltaX;
+    public float SizeDeltaX => sizeDeltaX;
+
+    [SerializeField] protected float sizeDeltaY;
+    public float SizeDeltaY => sizeDeltaY;
 }

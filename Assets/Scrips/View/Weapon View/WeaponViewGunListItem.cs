@@ -29,6 +29,7 @@ public class WeaponViewGunListItem : EnhancedScrollerCellView, IBeginDragHandler
         if (!string.IsNullOrWhiteSpace(wpdata.cf.Image))
         {
             iconGun.sprite = SpriteLibControl.Instance.GetSpriteByName(wpdata.cf.Image);
+            iconGun.rectTransform.sizeDelta = new Vector2(wpdata.cf.SizeDeltaX, wpdata.cf.SizeDeltaY);
             Color color = iconGun.color;
             color.a = 100f;
             iconGun.color = color;
@@ -41,7 +42,8 @@ public class WeaponViewGunListItem : EnhancedScrollerCellView, IBeginDragHandler
             iconGun.color = color;
         }
         item_drag.GetComponent<Image>().sprite = iconGun.sprite;
-        if(string.IsNullOrWhiteSpace(wpdata.cf.Image))
+        item_drag.GetComponent<RectTransform>().sizeDelta = iconGun.rectTransform.sizeDelta;
+        if (string.IsNullOrWhiteSpace(wpdata.cf.Image))
         {
             Color color = item_drag.GetComponent<Image>().color;
             color.a = 0f;

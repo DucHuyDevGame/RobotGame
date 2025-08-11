@@ -14,17 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   records:
   - id: 1
-    image: WP_1
+    image: Gripper
     name: Gripper
-    prefabImage: body1
+    prefabImage: Gripper
+    sizeDeltaX: 154
+    sizeDeltaY: 156
     manipulatorType: 1
   - id: 2
-    image: WP_2
+    image: "B\xECnh x\u1ECBt"
     name: "B\xECnh x\u1ECBt ch\u1EEFa ch\xE1y"
-    prefabImage: body2
+    prefabImage: "B\xECnh x\u1ECBt"
+    sizeDeltaX: 154
+    sizeDeltaY: 156
     manipulatorType: 2
   - id: 3
-    image: WP_5
+    image: "B\xF3ng \u0111\xE8n"
     name: "\u0110\xE8n"
-    prefabImage: body3
+    prefabImage: "B\xF3ng \u0111\xE8n"
+    sizeDeltaX: 154
+    sizeDeltaY: 156
     manipulatorType: 3

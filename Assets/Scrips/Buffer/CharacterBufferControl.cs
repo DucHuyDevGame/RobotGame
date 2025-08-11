@@ -7,7 +7,7 @@ using UnityEngine.Rendering.Universal;
 public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
 {
     WeaponsData weaponData;
-    [SerializeField] SpriteRenderer movement, manipulator, sensor;
+    [SerializeField] SpriteRenderer movementLeft, movementRight, manipulatorLeft, manipulatorRight, sensor;
     public Transform trans;
     public TMP_Text tapEdit;
     public Light2D lightObjectGlobal;
@@ -22,7 +22,6 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
     {
         Setup();
     }
-
     private void OnEnable()
     {
         DataTrigger.RegisterValueChange(DataSchema.WEAPON, SetupData);
@@ -45,10 +44,23 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
             return;
 
         if (weaponData.movementData.movementType == MovementType.None)
-            movement.sprite = null;
+            movementLeft.sprite = movementRight.sprite = null;
         else
-            movement.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.movementData.image);
-
+        {
+            if(weaponData.movementData.movementType == MovementType.Legs)
+            {
+                movementLeft.transform.localPosition = new Vector3(-1.71f, -0.92f, -0.1f);
+                movementLeft.transform.localRotation = /*new Vector3(0f, 172.706f,0f)*/ Quaternion.Euler(0f, 172.706f, 0f);
+                movementRight.transform.localPosition = new Vector3(1.58f, -0.96f, 0f);
+            }
+            else if (weaponData.movementData.movementType == MovementType.Wheels)
+            {
+                movementLeft.transform.localPosition = new Vector3(-0.59f, -1.347f, 0f);
+                movementLeft.transform.localRotation = Quaternion.identity;
+                movementRight.transform.localPosition = new Vector3(0.528f, -1.34f, 0f);
+            }
+            movementLeft.sprite = movementRight.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.movementData.image);
+        }
         //if(lightObjectGlobal != null)
         //{
         //    if (weaponData.sensorTypeData.sensorType == SensorsType.LightSensor)
@@ -56,7 +68,13 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
         //    else
         //        lightObjectGlobal.intensity = 1f;
         //}
-        manipulator.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.manipulatorData.image);
+
+        if (weaponData.manipulatorData.manipulatorType == ManipulatorType.Gripper)
+            manipulatorLeft.transform.localScale = manipulatorRight.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        else
+            manipulatorLeft.transform.localScale = manipulatorRight.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+
+        manipulatorLeft.sprite = manipulatorRight.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.manipulatorData.image);
         sensor.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.sensorTypeData.image);
         if (lightObjectSensor != null)
         {

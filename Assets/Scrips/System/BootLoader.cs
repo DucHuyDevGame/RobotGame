@@ -9,13 +9,15 @@ public class BootLoader : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         yield return new WaitForSeconds(1);
+        var task = SpriteLibControl.InitSprites("UIGame");
+        yield return new WaitUntil(() => task.IsCompleted);
         ConfigManager.Instance.InitConfig(InitData);
     }
     private void InitData()
     {
         DataController.Instance.InitData(() =>
         {
-            LoadSceneManager.Instance.LoadSceneByName("Buffer", true ,LoadSceneDone);
+            LoadSceneManager.Instance.LoadSceneByName("Buffer", true, LoadSceneDone);
         });
     }
    

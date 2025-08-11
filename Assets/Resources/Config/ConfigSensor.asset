@@ -14,17 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   records:
   - id: 1
-    image: WP_5
+    image: ultrasonic
     name: Ultrasonic Sensor
-    prefabImage: head5
+    prefabImage: ultrasonic
+    sizeDeltaX: 154
+    sizeDeltaY: 156
     sensorType: 1
   - id: 2
-    image: WP_3
+    image: heat sensor
     name: Heat Sensor
-    prefabImage: head6
+    prefabImage: heat sensor
+    sizeDeltaX: 154
+    sizeDeltaY: 156
     sensorType: 2
   - id: 3
-    image: WP_4
+    image: light sensor
     name: Light Sensor
-    prefabImage: head7
+    prefabImage: light sensor
+    sizeDeltaX: 154
+    sizeDeltaY: 156
     sensorType: 3

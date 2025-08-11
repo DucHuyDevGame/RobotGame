@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UIGame
+  m_EditorClassIdentifier: 
+  m_GroupName: UIGame
+  m_Data:
+    m_SerializedData: []
+  m_GUID: bad5be0741fa6454785bf775669c1f94
+  m_SerializeEntries:
+  - m_GUID: 53d98e445ebf2224baeed22a6f600999
+    m_Address: Assets/Art Test/characters/robot
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - UIGame
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 7f40ceef4dafcb34bb75006ea977b440, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d845ebe4210b47a4e836b32708a48add, type: 2}
+    - {fileID: 11400000, guid: db7fd6e308bfa424ba5a33b2c51f43b1, type: 2}

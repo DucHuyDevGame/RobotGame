@@ -1389,8 +1389,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01b40af5fa96904486d9bcda79de14b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 3136539322147596}
-  manipulator: {fileID: 632849726695984987}
+  movementLeft: {fileID: 0}
+  movementRight: {fileID: 0}
+  manipulatorLeft: {fileID: 0}
+  manipulatorRight: {fileID: 0}
   sensor: {fileID: 53189304833866473}
   trans: {fileID: 0}
   tapEdit: {fileID: 5347366113390494547}

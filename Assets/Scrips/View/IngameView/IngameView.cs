@@ -21,7 +21,7 @@ public class IngameView : BaseView
             CharacterBufferControl.Instance.fireObject.SetActive(true);
         CharacterBufferControl.Instance.ground.SetActive(true);
         CharacterBufferControl.Instance.tapEdit.gameObject.SetActive(true);
-        CharacterBufferControl.Instance.trans.DOMove(new Vector3(-5.27f, 0.82f, -1f), 0.05f)
+        CharacterBufferControl.Instance.trans.DOMove(new Vector3(-5.1f, 0.82f, -1f), 0.05f)
             .SetEase(Ease.OutQuad);
         cfLevel = GameManager.Instance.cur_cf_Level;
         taskTypeTxt.text = $"Task type: {cfLevel.TaskType}";

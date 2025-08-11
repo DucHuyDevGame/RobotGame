@@ -12,7 +12,7 @@ public class HomeView : BaseView
     {
         base.Setup(param);
         weapon = DataController.Instance.ReloadWeapon(); 
-        CharacterBufferControl.Instance.trans.DOMove(new Vector3(-6.23f, 0.7f, -1f), 0.5f)
+        CharacterBufferControl.Instance.trans.DOMove(new Vector3(-5.92f, 0.7f, -1f), 0.5f)
             .SetEase(Ease.OutQuad);
     }
     public void OnWeaponView()
