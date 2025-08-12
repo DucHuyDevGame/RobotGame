@@ -1,6 +1,4 @@
 using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,19 +7,16 @@ public class MenuControl : BYSingletonMono<MenuControl>
     [SerializeField] RectTransform top;
     [SerializeField] RectTransform bottom;
     [SerializeField] RectTransform right;
-    void Awake()
+    private void OnEnable()
     {
-        SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+        if (SceneManager.GetActiveScene().name == "Buffer")
+            AnimHomeView();
     }
-
-    private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
+    public void AnimHomeView()
     {
-        if(arg0.buildIndex==1)
-        {
-            top.DOAnchorPosY(0, 0.5f);
-            bottom.DOAnchorPosY(0, 0.5f);
-            right.DOAnchorPosX(-555, 0.25f);
-            right.DOAnchorPosY(-18, 0.5f);
-        }
+        top.DOAnchorPosY(0, 0.5f);
+        bottom.DOAnchorPosY(0, 0.5f);
+        right.DOAnchorPosX(-555, 0.25f);
+        right.DOAnchorPosY(-18, 0.5f);
     }
 }

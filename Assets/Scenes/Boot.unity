@@ -122,6 +122,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &787368118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 787368120}
+  - component: {fileID: 787368119}
+  m_Layer: 0
+  m_Name: AddressablesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &787368119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787368118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a25bc4ac4e680498804c776a4f5f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &787368120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787368118}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1673458967}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1141535156
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b7e10a3caf52b4dba8ebb551179ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addressablesManager: {fileID: 787368119}
 --- !u!4 &1673458967
 Transform:
   m_ObjectHideFlags: 0
@@ -562,6 +607,7 @@ Transform:
   - {fileID: 3432459454032260541}
   - {fileID: 1751665034}
   - {fileID: 1394754917}
+  - {fileID: 787368120}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1751665033
@@ -670,6 +716,10 @@ MonoBehaviour:
   progress_lb: {fileID: 2537697719613502496}
   time_delay: 0.05
   width: 2560
+  totalDuration: 3.5
+  activationDuration: 1.5
+  maxStepPerTick: 0.02
+  epsilon: 0.005
 --- !u!1 &1869887379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,7 +1661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6651214741412248335
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,10 +27,13 @@ public class WinDialog : BaseDialog
         DialogManager.Instance.HideDialog(dialogIndex);
         DataController.Instance.UpdateMissionData(dl_param.cf_level.ID, 3);
         ConfigLevelRecord cf = ConfigManager.Instance.configLevel.GetRecordBykeySearch(dl_param.cf_level.ID + 1);
-        LoadSceneManager.Instance.LoadSceneByName(cf.SceneName, false ,() =>
+        LoadSceneManager.Instance.LoadSceneByName(cf.SceneName, false ,(success) =>
         {
-            GameManager.Instance.cur_cf_Level = cf;
-            ViewManager.Instance.SwitchView(ViewIndex.IngameView);
+            if(success)
+            {
+                GameManager.Instance.cur_cf_Level = cf;
+                ViewManager.Instance.SwitchView(ViewIndex.IngameView);
+            }
         });
     }
 }

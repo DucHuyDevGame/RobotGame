@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Level
+  m_EditorClassIdentifier: 
+  m_GroupName: Level
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d6a39a2128948234e952eb0118e678ae
+  m_SerializeEntries:
+  - m_GUID: 9cc1bc1e7f5f92e49b37780a8a08d906
+    m_Address: Buffer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Level
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2cda990e2423bbf4892e6590ba056729
+    m_Address: Ingame1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Level
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67a1b87600c51eb4a9ed5c37f267959f
+    m_Address: Ingame2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Level
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 929501d894feddf439fd3afb57724d51
+    m_Address: Ingame3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Level
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a05609348b1bf3243a5791545edf0e12
+    m_Address: Ingame4
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Level
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45a75e7005c291a418c58bf79573031a
+    m_Address: Ingame5
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Level
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e932fc71e5ab24f4eb0881518af62aa9
+    m_Address: Ingame6
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Level
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdbcba550075dad4289b0784adc8d0c8
+    m_Address: Ingame7
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Level
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3220840fd725f247b5f2a2f4f0c2f2b
+    m_Address: Ingame8
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Level
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89dcad930a3c769409660811a1ba2efc
+    m_Address: Ingame9
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Level
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 938a9ebc08b679842bee3a76a79535ce
+    m_Address: Ingame10
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Level
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 7f40ceef4dafcb34bb75006ea977b440, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 6cc9a7b78807f4a4199df90f9679cec1, type: 2}
+    - {fileID: 11400000, guid: b90413acd33a60e4c9534f82e351a2a0, type: 2}

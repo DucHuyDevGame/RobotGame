@@ -54,9 +54,10 @@ public class IngameView : BaseView
         //DialogManager.Instance.ShowDialog(DialogIndex.PauseDialog);
         RobotController.Instance.gameObject.SetActive(false);
         ViewManager.Instance.SwitchView(ViewIndex.EmptyView);
-        LoadSceneManager.Instance.LoadSceneByIndex(1, false, () =>
+        LoadSceneManager.Instance.LoadSceneByName("Buffer", false, (success) =>
         {
-            ViewManager.Instance.SwitchView(ViewIndex.HomeView);
+            if(success)
+                ViewManager.Instance.SwitchView(ViewIndex.HomeView);
         });
     }
     bool IsPointerOverGameObject(Vector2 pos)

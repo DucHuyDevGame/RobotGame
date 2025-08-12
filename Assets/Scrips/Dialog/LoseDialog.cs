@@ -18,9 +18,10 @@ public class LoseDialog : BaseDialog
     public void ReturnIngame()
     {
         DialogManager.Instance.HideDialog(dialogIndex);
-        LoadSceneManager.Instance.LoadSceneByName(GameManager.Instance.cur_cf_Level.SceneName, false,() =>
-        {
-            ViewManager.Instance.SwitchView(ViewIndex.IngameView);
+        LoadSceneManager.Instance.LoadSceneByName(GameManager.Instance.cur_cf_Level.SceneName, false,(success) => 
+        { 
+            if (success) 
+                ViewManager.Instance.SwitchView(ViewIndex.IngameView); 
         });
     }
 }

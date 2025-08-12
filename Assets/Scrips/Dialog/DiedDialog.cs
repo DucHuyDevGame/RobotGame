@@ -17,9 +17,10 @@ public class DiedDialog : BaseDialog
     public void ReturnGame()
     {
         DialogManager.Instance.HideDialog(dialogIndex);
-        LoadSceneManager.Instance.LoadSceneByName(GameManager.Instance.cur_cf_Level.SceneName, false, () =>
+        LoadSceneManager.Instance.LoadSceneByName(GameManager.Instance.cur_cf_Level.SceneName, false, (success) =>
         {
-            ViewManager.Instance.SwitchView(ViewIndex.IngameView);
+            if(success)
+                ViewManager.Instance.SwitchView(ViewIndex.IngameView);
         });
     }
 }

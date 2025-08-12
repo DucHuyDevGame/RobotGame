@@ -22,9 +22,10 @@ public class StageView : BaseView
             ConfigLevelRecord cf_level = ConfigManager.Instance.configLevel.GetRecordBykeySearch(id);
             GameManager.Instance.cur_cf_Level = cf_level;
             ViewManager.Instance.SwitchView(ViewIndex.EmptyView);
-            LoadSceneManager.Instance.LoadSceneByName(cf_level.SceneName, true ,() =>
+            LoadSceneManager.Instance.LoadSceneByName(cf_level.SceneName, true ,(success) =>
             {
-                ViewManager.Instance.SwitchView(ViewIndex.IngameView);
+                if (success)
+                    ViewManager.Instance.SwitchView(ViewIndex.IngameView);
             });
         }
     }

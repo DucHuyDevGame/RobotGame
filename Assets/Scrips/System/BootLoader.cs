@@ -2,22 +2,27 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class BootLoader : MonoBehaviour
 {
+    [SerializeField] AddressablesManager addressablesManager;
     IEnumerator Start()
     {
         DontDestroyOnLoad(gameObject);
         yield return new WaitForSeconds(1);
-        var task = SpriteLibControl.InitSprites("UIGame");
-        yield return new WaitUntil(() => task.IsCompleted);
+        yield return StartCoroutine(addressablesManager.InitAddressable);
         ConfigManager.Instance.InitConfig(InitData);
     }
     private void InitData()
     {
         DataController.Instance.InitData(() =>
         {
-            LoadSceneManager.Instance.LoadSceneByName("Buffer", true, LoadSceneDone);
+            LoadSceneManager.Instance.LoadSceneByName("Buffer",true,(success) =>
+            {
+                if (success)
+                    LoadSceneDone();
+            });
         });
     }
    

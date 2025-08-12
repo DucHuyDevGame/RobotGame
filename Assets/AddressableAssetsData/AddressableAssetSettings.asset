@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: ed7688cba0831654990a5b24871ac57e
   m_currentHash:
     serializedVersion: 2
-    Hash: d6508c82ada6703272c328add86f1e41
+    Hash: 1d472cc87a1cf512681411818051b23e
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 99161f76d6317844a81ae668613f578f, type: 2}
   - {fileID: 11400000, guid: bb13edcdf35911045997a1fbc08b7e69, type: 2}
   - {fileID: 11400000, guid: 858b79d9f9a28354d88f67edb2f05fbe, type: 2}
+  - {fileID: 11400000, guid: f8e54777a398044459c85790fec16fc1, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -89,6 +90,7 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - UIGame
+    - Level
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 315e35e89b854bf4aaf777ad7c9e6430, type: 2}
