@@ -21,11 +21,21 @@ public class ObjectObstacleHandler : MonoBehaviour ,IObstacleHandler
         if (hit.collider == null)
             return;
         WeaponsData weapons = data.ReloadWeapon();
-        if (weapons.movementData.movementType != MovementType.Legs)
-            robot.runRobot = false;
-        else
+
+        if (weapons.sensorTypeData.sensorType != SensorsType.UltrasonicSensor)
         {
-            if (weapons.sensorTypeData.sensorType == SensorsType.UltrasonicSensor)
+            robot.runRobot = false;
+            return;
+        }
+
+        if(weapons.movementData.movementType != MovementType.Tracks)
+        {
+            if(weapons.movementData.movementType == MovementType.Wheels)
+            {
+                objectGame.SetActive(false);
+                CharacterBufferControl.Instance.AddGripperObject();
+            }
+            else if(weapons.movementData.movementType == MovementType.Legs)
             {
                 if (weapons.manipulatorData.manipulatorType != ManipulatorType.Gripper)
                     robot.Jump();
@@ -34,10 +44,18 @@ public class ObjectObstacleHandler : MonoBehaviour ,IObstacleHandler
                     objectGame.SetActive(false);
                     CharacterBufferControl.Instance.AddGripperObject();
                 }
-
             }
-            else
-                robot.runRobot = false;
+        }
+        
+        else
+        {
+            robot.runRobot = false;
+            if (weapons.manipulatorData.manipulatorType == ManipulatorType.Gripper)
+            {
+                objectGame.SetActive(false);
+                CharacterBufferControl.Instance.AddGripperObject();
+            }
+
         }
     }
 }

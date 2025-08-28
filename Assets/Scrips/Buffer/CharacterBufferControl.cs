@@ -92,7 +92,16 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
     {
         GameObject obj = Instantiate(Resources.Load("Object/ObjectRobot", typeof(GameObject)), Vector3.zero, Quaternion.identity) as GameObject;
         obj.transform.SetParent(gripperObject.transform, false);
-
+        if (weaponData.manipulatorData.manipulatorType != ManipulatorType.Gripper)
+        {
+            gripperObject.transform.localPosition = new Vector3(0, 1.52f, 0);
+            obj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        }
+        else
+        {
+            gripperObject.transform.localPosition = new Vector3(0, 3.17f, 0);
+            obj.transform.localScale = Vector3.one;
+        }
     }
 
 }
