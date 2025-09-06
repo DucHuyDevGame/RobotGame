@@ -15,10 +15,14 @@ public class IngameView : BaseView
     {
         base.Setup(param);
         RobotController.Instance.RigiBody.gravityScale = 1;
+        
         if (CharacterBufferControl.Instance.wallObject != null)
             CharacterBufferControl.Instance.wallObject.SetActive(true);
-        if (CharacterBufferControl.Instance.fireObject != null)
+        else if (CharacterBufferControl.Instance.fireObject != null)
             CharacterBufferControl.Instance.fireObject.SetActive(true);
+        else if (CharacterBufferControl.Instance.gripperObject != null)
+            CharacterBufferControl.Instance.gripperObject.SetActive(true);
+        
         CharacterBufferControl.Instance.ground.SetActive(true);
         CharacterBufferControl.Instance.tapEdit.gameObject.SetActive(true);
         CharacterBufferControl.Instance.trans.DOMove(new Vector3(-5.1f, 0.82f, -1f), 0.05f)
@@ -78,6 +82,8 @@ public class IngameView : BaseView
     private void Update()
     {
         if (!Input.GetMouseButtonDown(0))
+            return;
+        if(RobotController.Instance.runRobot)
             return;
         Vector2 mousePosition = Input.mousePosition;
         if (IsPointerOverGameObject(mousePosition))

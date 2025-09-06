@@ -1018,7 +1018,8 @@ MonoBehaviour:
   wallObject: {fileID: 0}
   fireObject: {fileID: 0}
   ground: {fileID: 0}
-  gripperObject: {fileID: 4481986625812641538}
+  gripperObject: {fileID: 0}
+  gripperObjectHand: {fileID: 4481986625812641538}
 --- !u!114 &8144522877002368068
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,18 +19,18 @@ public class WallObstacleHander : MonoBehaviour, IObstacleHandler
         if (hit.collider == null)
             return;
         WeaponsData weapons = data.ReloadWeapon();
+
         if (weapons.movementData.movementType != MovementType.Legs)
-            robot.runRobot = false;
-        else
         {
-            if (weapons.sensorTypeData.sensorType != SensorsType.UltrasonicSensor)
-            {
-                robot.runRobot = false;
-                Debug.DrawRay(origin, direction * distance, Color.red);
-                return;
-            }
-            else
-                robot.Jump();
+            robot.runRobot = false;
+            return;
         }
+        if (weapons.sensorTypeData.sensorType != SensorsType.UltrasonicSensor)
+        {
+            robot.runRobot = false;
+            Debug.DrawRay(origin, direction * distance, Color.red);
+        }
+        else
+            robot.Jump();
     }
 }

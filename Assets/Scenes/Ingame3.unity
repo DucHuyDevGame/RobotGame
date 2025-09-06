@@ -477,6 +477,14 @@ PrefabInstance:
       propertyPath: ground
       value: 
       objectReference: {fileID: 1245031153}
+    - target: {fileID: 1695374266206353968, guid: e32e2a890ab9edd47ac20d391d92eebb, type: 3}
+      propertyPath: gripperObject
+      value: 
+      objectReference: {fileID: 952963926}
+    - target: {fileID: 1695374266206353968, guid: e32e2a890ab9edd47ac20d391d92eebb, type: 3}
+      propertyPath: gripperObjectHand
+      value: 
+      objectReference: {fileID: 1069530128}
     - target: {fileID: 3027862964769250591, guid: e32e2a890ab9edd47ac20d391d92eebb, type: 3}
       propertyPath: jumpForce
       value: 25
@@ -548,6 +556,11 @@ PrefabInstance:
 --- !u!4 &1069530127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7747294239459468298, guid: e32e2a890ab9edd47ac20d391d92eebb, type: 3}
+  m_PrefabInstance: {fileID: 1069530126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1069530128 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4481986625812641538, guid: e32e2a890ab9edd47ac20d391d92eebb, type: 3}
   m_PrefabInstance: {fileID: 1069530126}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1245031151
@@ -1543,6 +1556,7 @@ MonoBehaviour:
   fireObject: {fileID: 0}
   ground: {fileID: 0}
   gripperObject: {fileID: 847036682054500294}
+  gripperObjectHand: {fileID: 0}
 --- !u!1 &6068468247243578675
 GameObject:
   m_ObjectHideFlags: 0

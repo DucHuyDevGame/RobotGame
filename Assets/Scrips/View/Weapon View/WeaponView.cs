@@ -16,10 +16,16 @@ public class WeaponView : BaseView
     {
         base.Setup(param);
         RobotController.Instance.RigiBody.gravityScale = 0;
+        
         if(CharacterBufferControl.Instance.wallObject != null)
             CharacterBufferControl.Instance.wallObject.SetActive(false);
-        if(CharacterBufferControl.Instance.fireObject != null)
+        
+        else if(CharacterBufferControl.Instance.fireObject != null)
             CharacterBufferControl.Instance.fireObject.SetActive(false);
+        
+        else if (CharacterBufferControl.Instance.gripperObject != null)
+            CharacterBufferControl.Instance.gripperObject.SetActive(false);
+        
         CharacterBufferControl.Instance.ground.SetActive(false);
         CharacterBufferControl.Instance.tapEdit.gameObject.SetActive(false);
         lockUIObject.SetActive(false);

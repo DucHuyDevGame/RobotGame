@@ -27,35 +27,12 @@ public class ObjectObstacleHandler : MonoBehaviour ,IObstacleHandler
             robot.runRobot = false;
             return;
         }
-
-        if(weapons.movementData.movementType != MovementType.Tracks)
-        {
-            if(weapons.movementData.movementType == MovementType.Wheels)
-            {
-                objectGame.SetActive(false);
-                CharacterBufferControl.Instance.AddGripperObject();
-            }
-            else if(weapons.movementData.movementType == MovementType.Legs)
-            {
-                if (weapons.manipulatorData.manipulatorType != ManipulatorType.Gripper)
-                    robot.Jump();
-                else
-                {
-                    objectGame.SetActive(false);
-                    CharacterBufferControl.Instance.AddGripperObject();
-                }
-            }
-        }
-        
-        else
+        if (weapons.manipulatorData.manipulatorType != ManipulatorType.Gripper)
         {
             robot.runRobot = false;
-            if (weapons.manipulatorData.manipulatorType == ManipulatorType.Gripper)
-            {
-                objectGame.SetActive(false);
-                CharacterBufferControl.Instance.AddGripperObject();
-            }
-
+            return;
         }
+        objectGame.SetActive(false);
+        CharacterBufferControl.Instance.AddGripperObject();
     }
 }
