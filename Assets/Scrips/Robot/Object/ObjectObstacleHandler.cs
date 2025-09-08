@@ -29,7 +29,7 @@ public class ObjectObstacleHandler : MonoBehaviour ,IObstacleHandler
         }
         if (weapons.manipulatorData.manipulatorType != ManipulatorType.Gripper)
         {
-            robot.runRobot = false;
+            robot.Jump();
             return;
         }
         objectGame.SetActive(false);
