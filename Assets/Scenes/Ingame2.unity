@@ -452,7 +452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2174563490621000734, guid: dd0ede063e6e30348b9e0a93aed76628, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.51
+      value: 2.38
       objectReference: {fileID: 0}
     - target: {fileID: 2174563490621000734, guid: dd0ede063e6e30348b9e0a93aed76628, type: 3}
       propertyPath: m_LocalPosition.z
@@ -871,7 +871,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.14193484}
+  m_Offset: {x: 0, y: -0.15802297}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -882,7 +882,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.7161303}
+  m_Size: {x: 1, y: 0.68395406}
   m_EdgeRadius: 0
 --- !u!50 &1666226206398093239
 Rigidbody2D:
@@ -1449,6 +1449,7 @@ MonoBehaviour:
   fireObject: {fileID: 0}
   ground: {fileID: 1781610032351571358}
   gripperObject: {fileID: 847036682559415555}
+  gripperObjectHand: {fileID: 0}
 --- !u!1 &6068468246737602550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,7 +1817,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.31199408, y: -0.14391375}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1827,7 +1828,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.22, y: 6.81}
+  m_Size: {x: 5.690482, y: 6.522172}
   m_EdgeRadius: 0
 --- !u!60 &7773827943721118966
 PolygonCollider2D:

@@ -39,6 +39,7 @@ public class RobotController : BYSingletonMono<RobotController>
             return;
         rigi.velocity = new Vector2(rigi.velocity.x, 0f);
         Vector2 jumpDirection = (Vector2.up + moveDirection).normalized;
+
         rigi.AddForce(jumpDirection * jumpForce, ForceMode2D.Impulse);
     }
     public bool IsGrounded()

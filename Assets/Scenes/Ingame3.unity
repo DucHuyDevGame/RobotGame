@@ -388,7 +388,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.11965847, y: -0.03263396}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -399,7 +399,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.05, y: 3.12}
+  m_Size: {x: 5.028245, y: 2.7936573}
   m_EdgeRadius: 0
 --- !u!114 &952963929
 MonoBehaviour:
@@ -481,14 +481,6 @@ PrefabInstance:
       propertyPath: gripperObject
       value: 
       objectReference: {fileID: 952963926}
-    - target: {fileID: 1695374266206353968, guid: e32e2a890ab9edd47ac20d391d92eebb, type: 3}
-      propertyPath: gripperObjectHand
-      value: 
-      objectReference: {fileID: 1069530128}
-    - target: {fileID: 3027862964769250591, guid: e32e2a890ab9edd47ac20d391d92eebb, type: 3}
-      propertyPath: jumpForce
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 7211091644300760081, guid: e32e2a890ab9edd47ac20d391d92eebb, type: 3}
       propertyPath: m_Name
       value: RobotController
@@ -538,10 +530,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 952963926}
     - target: {fileID: 8144522877002368068, guid: e32e2a890ab9edd47ac20d391d92eebb, type: 3}
-      propertyPath: distanceWall
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8144522877002368068, guid: e32e2a890ab9edd47ac20d391d92eebb, type: 3}
       propertyPath: obstacleHandler
       value: 
       objectReference: {fileID: 952963929}
@@ -556,11 +544,6 @@ PrefabInstance:
 --- !u!4 &1069530127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7747294239459468298, guid: e32e2a890ab9edd47ac20d391d92eebb, type: 3}
-  m_PrefabInstance: {fileID: 1069530126}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1069530128 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4481986625812641538, guid: e32e2a890ab9edd47ac20d391d92eebb, type: 3}
   m_PrefabInstance: {fileID: 1069530126}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1245031151
@@ -683,7 +666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2174563490621000734, guid: dd0ede063e6e30348b9e0a93aed76628, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.51
+      value: 2.39
       objectReference: {fileID: 0}
     - target: {fileID: 2174563490621000734, guid: dd0ede063e6e30348b9e0a93aed76628, type: 3}
       propertyPath: m_LocalPosition.z
