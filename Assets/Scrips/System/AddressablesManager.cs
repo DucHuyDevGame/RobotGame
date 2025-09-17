@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -7,6 +8,7 @@ using UnityEngine.ResourceManagement.ResourceProviders;
 
 public class AddressablesManager : MonoBehaviour
 {
+    List<AsyncOperationHandle> _spriteHandles = new();
     public IEnumerator InitAddressable
     {
         get
@@ -36,13 +38,12 @@ public class AddressablesManager : MonoBehaviour
         foreach (var loc in locs.Result)
         {
             var h = Addressables.LoadAssetAsync<Sprite>(loc);
+            _spriteHandles.Add(h);
             yield return h;
             if (h.Status == AsyncOperationStatus.Succeeded && h.Result != null)
                 SpriteLibControl.AllSprites[h.Result.name] = h.Result;
-            Addressables.Release(h);
             yield return null;
         }
-
         Addressables.Release(locs);
     }
     IEnumerator PreloadAllLevels(string label)
