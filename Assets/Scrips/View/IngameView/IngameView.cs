@@ -55,7 +55,6 @@ public class IngameView : BaseView
     }
     public void OnPause()
     {
-        //DialogManager.Instance.ShowDialog(DialogIndex.PauseDialog);
         RobotController.Instance.gameObject.SetActive(false);
         ViewManager.Instance.SwitchView(ViewIndex.EmptyView);
         LoadSceneManager.Instance.LoadSceneByName("Buffer", false, (success) =>
@@ -83,7 +82,7 @@ public class IngameView : BaseView
     {
         if (!Input.GetMouseButtonDown(0))
             return;
-        if(RobotController.Instance.runRobot)
+        if(RobotController.Instance.timeStart)
             return;
         Vector2 mousePosition = Input.mousePosition;
         if (IsPointerOverGameObject(mousePosition))

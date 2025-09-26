@@ -13,7 +13,7 @@ public class SensorTrigger : MonoBehaviour
     [SerializeField] ObjectObstacleHandler obstacleHandler;
     private void Start()
     {
-        if(fireHandler != null)
+        if (fireHandler != null)
             fireHandler.Init(RobotController.Instance, DataController.Instance, fireCheck);
         if (wallObstacleHander != null)
             wallObstacleHander.Init(RobotController.Instance, DataController.Instance);

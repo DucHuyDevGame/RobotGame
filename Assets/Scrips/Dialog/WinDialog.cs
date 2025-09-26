@@ -25,15 +25,25 @@ public class WinDialog : BaseDialog
     public void OnClaim()
     {
         DialogManager.Instance.HideDialog(dialogIndex);
+        ViewManager.Instance.SwitchView(ViewIndex.EmptyView);
         DataController.Instance.UpdateMissionData(dl_param.cf_level.ID, 3);
-        ConfigLevelRecord cf = ConfigManager.Instance.configLevel.GetRecordBykeySearch(dl_param.cf_level.ID + 1);
-        LoadSceneManager.Instance.LoadSceneByName(cf.SceneName, false ,(success) =>
+        if(dl_param.cf_level.ID == 5)
         {
-            if(success)
+            LoadSceneManager.Instance.LoadSceneByName("Buffer", false, (success) =>
             {
-                GameManager.Instance.cur_cf_Level = cf;
-                ViewManager.Instance.SwitchView(ViewIndex.IngameView);
-            }
-        });
+                if (success)
+                    ViewManager.Instance.SwitchView(ViewIndex.HomeView);
+            });
+        }
+        else
+        {
+            ConfigLevelRecord cf = ConfigManager.Instance.configLevel.GetRecordBykeySearch(dl_param.cf_level.ID + 1);
+            GameManager.Instance.cur_cf_Level = cf;
+            LoadSceneManager.Instance.LoadSceneByName(cf.SceneName, false, (success) =>
+            {
+                if (success)
+                    ViewManager.Instance.SwitchView(ViewIndex.IngameView);
+            });
+        }
     }
 }

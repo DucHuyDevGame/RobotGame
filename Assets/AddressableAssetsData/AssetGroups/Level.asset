@@ -53,36 +53,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Level
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e932fc71e5ab24f4eb0881518af62aa9
-    m_Address: Ingame6
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Level
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bdbcba550075dad4289b0784adc8d0c8
-    m_Address: Ingame7
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Level
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c3220840fd725f247b5f2a2f4f0c2f2b
-    m_Address: Ingame8
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Level
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 89dcad930a3c769409660811a1ba2efc
-    m_Address: Ingame9
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Level
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 938a9ebc08b679842bee3a76a79535ce
-    m_Address: Ingame10
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Level
-    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 7f40ceef4dafcb34bb75006ea977b440, type: 2}
   m_SchemaSet:

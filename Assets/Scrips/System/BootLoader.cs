@@ -18,7 +18,7 @@ public class BootLoader : MonoBehaviour
     {
         DataController.Instance.InitData(() =>
         {
-            LoadSceneManager.Instance.LoadSceneByName("Buffer",true,(success) =>
+            LoadSceneManager.Instance.LoadSceneByName("Buffer",false,(success) =>
             {
                 if (success)
                     LoadSceneDone();

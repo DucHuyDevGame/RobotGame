@@ -445,7 +445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 250}
+  m_AnchoredPosition: {x: 0, y: -49}
   m_SizeDelta: {x: 2560, y: 146.6982}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &33652313539437531
@@ -1193,7 +1193,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 1200, y: 162.5673}
+  m_AnchoredPosition: {x: -495, y: 316}
   m_SizeDelta: {x: 1000, y: 710.8655}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &2347423939626996652
@@ -1484,9 +1484,9 @@ GameObject:
   - component: {fileID: 4808262752360553385}
   - component: {fileID: 8109219322003947720}
   - component: {fileID: 1394664189896475700}
-  - component: {fileID: 7113134854545040043}
+  - component: {fileID: 7275815406889624593}
   m_Layer: 0
-  m_Name: IngameViewAnimation
+  m_Name: BaseViewAnimation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1532,7 +1532,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &7113134854545040043
+--- !u!114 &7275815406889624593
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1541,11 +1541,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6330756849867147522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8baf989afa53b2747960ed25fcbf96fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 011081290028f524f8ef2867065cea2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  right: {fileID: 7255497239870268832}
-  top: {fileID: 5562381207289268003}
 --- !u!1 &6362408797678498789
 GameObject:
   m_ObjectHideFlags: 0

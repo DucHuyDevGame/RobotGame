@@ -14,6 +14,7 @@ public class RobotController : BYSingletonMono<RobotController>
         get { return speed; }
         set { speed = value; }
     }
+
     [SerializeField] float jumpForce = 5f;
     [SerializeField] Vector2 sizeRobot;
     [SerializeField] LayerMask groundLayer;
