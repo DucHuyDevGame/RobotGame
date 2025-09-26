@@ -17,9 +17,6 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
     private void Awake()
     {
         trans = transform;
-    }
-    private void Start()
-    {
         Setup();
     }
     private void OnEnable()
@@ -78,14 +75,15 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
         sensor.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.sensorTypeData.image);
         if (lightObjectSensor != null)
         {
-            if (!RobotController.Instance.runRobot)
-                return;
             if (weaponData.manipulatorData.manipulatorType == ManipulatorType.LightBulb
-                && weaponData.sensorTypeData.sensorType == SensorsType.LightSensor
-                && GameManager.Instance.cur_cf_Level.ID == 4)
+                && /*weaponData.sensorTypeData.sensorType == SensorsType.LightSensor
+                && */GameManager.Instance.cur_cf_Level.ID == 4)
                 lightObjectSensor.gameObject.SetActive(true);
             else
                 lightObjectSensor.gameObject.SetActive(false);
+
+            if (!RobotController.Instance.runRobot)
+                return;
         }
     }
     public void AddGripperObject()

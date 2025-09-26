@@ -11,7 +11,7 @@ public class HomeView : BaseView
     public override void Setup(ViewParam param)
     {
         base.Setup(param);
-        weapon = DataController.Instance.ReloadWeapon(); 
+        weapon = DataController.Instance.ReloadWeapon();
         CharacterBufferControl.Instance.trans.DOMove(new Vector3(-5.92f, 0.7f, -1f), 0.5f)
             .SetEase(Ease.OutQuad);
     }

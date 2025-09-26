@@ -16,8 +16,9 @@ public class WeaponView : BaseView
     {
         base.Setup(param);
         RobotController.Instance.RigiBody.gravityScale = 0;
-        
-        if(CharacterBufferControl.Instance.wallObject != null)
+        CharacterBufferControl.Instance.lightObjectSensor.gameObject.SetActive(false);
+
+        if (CharacterBufferControl.Instance.wallObject != null)
             CharacterBufferControl.Instance.wallObject.SetActive(false);
         
         else if(CharacterBufferControl.Instance.fireObject != null)

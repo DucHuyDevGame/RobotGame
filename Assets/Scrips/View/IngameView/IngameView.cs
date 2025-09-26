@@ -15,6 +15,7 @@ public class IngameView : BaseView
     {
         base.Setup(param);
         RobotController.Instance.RigiBody.gravityScale = 1;
+        CharacterBufferControl.Instance.Setup();
         
         if (CharacterBufferControl.Instance.wallObject != null)
             CharacterBufferControl.Instance.wallObject.SetActive(true);

@@ -363,27 +363,6 @@ MonoBehaviour:
   - id: 5
     star: 0
     missionComplete: 0
-  - id: 6
-    star: 0
-    missionComplete: 0
-  - id: 7
-    star: 0
-    missionComplete: 0
-  - id: 8
-    star: 0
-    missionComplete: 0
-  - id: 9
-    star: 0
-    missionComplete: 0
-  - id: 10
-    star: 0
-    missionComplete: 0
-  - id: 11
-    star: 0
-    missionComplete: 0
-  - id: 12
-    star: 0
-    missionComplete: 0
   dataWeapon:
     movementData:
       image: "B\xE1nh xe"
