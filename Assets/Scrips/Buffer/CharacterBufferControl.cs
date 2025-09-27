@@ -76,8 +76,8 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
         if (lightObjectSensor != null)
         {
             if (weaponData.manipulatorData.manipulatorType == ManipulatorType.LightBulb
-                && /*weaponData.sensorTypeData.sensorType == SensorsType.LightSensor
-                && */GameManager.Instance.cur_cf_Level.ID == 4)
+                && weaponData.sensorTypeData.sensorType == SensorsType.LightSensor
+                && GameManager.Instance.cur_cf_Level.ID == 4)
                 lightObjectSensor.gameObject.SetActive(true);
             else
                 lightObjectSensor.gameObject.SetActive(false);
