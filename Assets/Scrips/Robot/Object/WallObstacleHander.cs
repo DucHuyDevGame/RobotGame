@@ -6,6 +6,7 @@ public class WallObstacleHander : MonoBehaviour, IObstacleHandler
 {
     private RobotController robot;
     private DataController data;
+    LayerMask mask;
     public void Init(RobotController robot, DataController data)
     {
         this.robot = robot;

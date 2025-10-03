@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class SensorTrigger : MonoBehaviour
@@ -28,13 +27,13 @@ public class SensorTrigger : MonoBehaviour
             RobotController.Instance.runRobot = false;
         }
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (!RobotController.Instance.runRobot)
             return;
-        if (fireHandler!= null)
+        if (fireHandler != null)
             fireHandler.HandleObstacle(obstacleCheck.transform.position, Vector2.right, distanceFire, fireLayerMask);
-        if (wallObstacleHander!= null)
+        if (wallObstacleHander != null)
             wallObstacleHander.HandleObstacle(obstacleCheck.transform.position, Vector2.right, distanceWall, wallLayer);
         if (obstacleHandler != null)
             obstacleHandler.HandleObstacle(obstacleCheck.transform.position, Vector2.right, distanceWall, objectLayer);
