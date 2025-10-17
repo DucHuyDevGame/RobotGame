@@ -52,8 +52,7 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
             }
             else if (weaponData.movementData.movementType == MovementType.Wheels)
             {
-                movementLeft.transform.localPosition = new Vector3(-0.59f, -1.347f, 0f);
-                movementLeft.transform.localRotation = Quaternion.identity;
+                movementLeft.transform.SetLocalPositionAndRotation(new Vector3(-0.59f, -1.347f, 0f), Quaternion.identity);
                 movementRight.transform.localPosition = new Vector3(0.528f, -1.34f, 0f);
             }
             movementLeft.sprite = movementRight.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.movementData.image);
@@ -73,6 +72,12 @@ public class CharacterBufferControl : BYSingletonMono<CharacterBufferControl>
 
         manipulatorLeft.sprite = manipulatorRight.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.manipulatorData.image);
         sensor.sprite = SpriteLibControl.Instance.GetSpriteByName(weaponData.sensorTypeData.image);
+        
+        if (weaponData.sensorTypeData.sensorType == SensorsType.HeatSensor)
+            sensor.gameObject.transform.localScale = new Vector3(0.55f, 0.55f, 0.55f);
+        else
+            sensor.gameObject.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+        
         if (lightObjectSensor != null)
         {
             if (weaponData.manipulatorData.manipulatorType == ManipulatorType.LightBulb

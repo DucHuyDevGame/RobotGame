@@ -1,7 +1,4 @@
 using EnhancedUI.EnhancedScroller;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -14,7 +11,7 @@ public class WeaponViewGunListItem : EnhancedScrollerCellView, IBeginDragHandler
     public Image iconGun;
     public WeaponView weaponView;
     WeaponListData wpdata;
-    public TMP_Text name_txt;
+    public Text name_txt;
     RectTransform rect_item_drag;
     public GameObject item_drag;
     public bool isValid = false;

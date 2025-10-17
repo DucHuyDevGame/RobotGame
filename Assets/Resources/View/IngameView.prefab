@@ -407,7 +407,7 @@ MonoBehaviour:
   levelTxt: {fileID: 4149045659318234677}
   timerTxt: {fileID: 4149045659318234677}
   btnRunRobot: {fileID: 219850724229249674}
-  intensity: 0.02
+  intensity: 0.1
 --- !u!1 &1432608383920869066
 GameObject:
   m_ObjectHideFlags: 0

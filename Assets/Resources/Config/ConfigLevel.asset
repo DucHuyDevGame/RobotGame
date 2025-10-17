@@ -23,7 +23,7 @@ MonoBehaviour:
     sensorsType: 4
     start: 0
     missionName: 1
-    timeFinished: 30
+    timeFinished: 15
   - id: 2
     taskType: 2
     environmentType: 1
@@ -34,7 +34,7 @@ MonoBehaviour:
     sensorsType: 1
     start: 0
     missionName: 2
-    timeFinished: 30
+    timeFinished: 15
   - id: 3
     taskType: 3
     environmentType: 1
@@ -45,7 +45,7 @@ MonoBehaviour:
     sensorsType: 1
     start: 0
     missionName: 3
-    timeFinished: 30
+    timeFinished: 15
   - id: 4
     taskType: 4
     environmentType: 2
@@ -56,7 +56,7 @@ MonoBehaviour:
     sensorsType: 3
     start: 0
     missionName: 4
-    timeFinished: 30
+    timeFinished: 15
   - id: 5
     taskType: 5
     environmentType: 1
@@ -67,4 +67,4 @@ MonoBehaviour:
     sensorsType: 2
     start: 0
     missionName: 5
-    timeFinished: 30
+    timeFinished: 15
